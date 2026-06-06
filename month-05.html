@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第五個月　一件衣服的世界旅行｜永續環遊世界365天</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:#8a6f2e;
+  --dark:#0d0c0a;--dark2:#141210;--dark3:#1c1a16;--dark4:#242118;
+  --text:#d4cbbf;--text-dim:#7a7060;--line:rgba(201,168,76,0.18);
+}
+body{background:var(--dark);color:var(--text);font-family:'Noto Serif TC',serif;font-weight:300;line-height:2;font-size:17px;overflow-x:hidden}
+nav{background:var(--dark2);border-bottom:1px solid var(--line);padding:0;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-home{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+.nav-home:hover{color:var(--gold)}
+.nav-toc{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.nav-toc::-webkit-scrollbar{display:none}
+.nav-toc a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:1px;color:var(--text-dim);text-decoration:none;padding:0 14px;white-space:nowrap;line-height:52px;border-bottom:2px solid transparent;transition:all .2s}
+.nav-toc a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.chapter-hero{background:linear-gradient(180deg,var(--dark2) 0%,var(--dark) 100%);border-bottom:1px solid var(--line);padding:80px 40px 64px;text-align:center;position:relative;overflow:hidden}
+.chapter-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-month{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:5px;color:var(--gold);margin-bottom:20px}
+.hero-title{font-size:clamp(24px,4vw,40px);font-weight:700;letter-spacing:3px;line-height:1.4;background:linear-gradient(135deg,#e8c97a,#c9a84c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.hero-cities{font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:4px;color:var(--text-dim)}
+main{max-width:700px;margin:0 auto;padding:72px 32px 100px}
+.chapter{margin-bottom:80px;opacity:0;animation:fadeUp .6s ease forwards}
+.chapter:nth-child(1){animation-delay:.1s}.chapter:nth-child(2){animation-delay:.2s}.chapter:nth-child(3){animation-delay:.3s}.chapter:nth-child(4){animation-delay:.4s}.chapter:nth-child(5){animation-delay:.5s}.chapter:nth-child(6){animation-delay:.6s}
+.chapter-num{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:12px}
+.chapter h2{font-size:clamp(18px,3vw,24px);font-weight:500;line-height:1.5;letter-spacing:1px;color:var(--gold-light);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.chapter h2 .city{font-weight:700;margin-right:4px}
+.chapter p{margin-bottom:1.6em;color:rgba(212,203,191,0.85)}
+.chapter strong{color:var(--text);font-weight:500}
+.notebook{background:rgba(201,168,76,0.06);border-left:2px solid var(--gold);padding:20px 24px;margin:36px 0;font-size:15px;color:var(--gold-light);line-height:2;font-style:italic;position:relative}
+.notebook::before{content:'筆記';display:block;font-family:'Noto Sans TC',sans-serif;font-style:normal;font-size:9px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:8px}
+.signage-wrap{text-align:center;margin:28px 0}
+.signage{display:inline-block;border:1px solid var(--gold-dim);padding:14px 32px;font-size:16px;font-weight:500;letter-spacing:3px;color:var(--gold-light)}
+.notes-section{background:var(--dark2);border-top:1px solid var(--line);padding:64px 32px 80px}
+.notes-inner{max-width:700px;margin:0 auto}
+.notes-title{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:40px}
+.note-card{border-top:1px solid var(--line);padding:28px 0}
+.note-card h3{font-size:15px;font-weight:500;color:var(--gold-light);margin-bottom:16px}
+.note-row{display:flex;gap:16px;font-size:13px;line-height:1.9;margin-bottom:6px}
+.note-label{font-family:'Noto Sans TC',sans-serif;color:var(--gold-dim);white-space:nowrap;min-width:80px}
+.note-val{color:rgba(212,203,191,0.7)}
+footer{background:var(--dark);border-top:1px solid var(--line);padding:40px;text-align:center}
+footer a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){main{padding:48px 20px 80px}.chapter-hero{padding:60px 24px 48px}.notes-section{padding:48px 20px 60px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-home" href="index.html">← 返回目錄</a>
+    <div class="nav-toc">
+      <a href="#ch1">§1</a><a href="#ch2">§2</a><a href="#ch3">§3</a>
+      <a href="#ch4">§4</a><a href="#ch5">§5</a><a href="#notes">案例</a>
+    </div>
+  </div>
+</nav>
+<div class="chapter-hero">
+  <div class="hero-month">MONTH 05</div>
+  <div class="hero-title">一件衣服的世界旅行</div>
+  <div class="hero-cities">米蘭　·　達卡　·　台灣紡織聚落</div>
+</div>
+<main>
+<article class="chapter" id="ch1"><div class="chapter-num">SECTION 01</div><h2><span class="city">米蘭</span>　櫥窗裡的綠色標籤</h2>
+<p>米蘭的早晨帶著一種被熨燙過的精緻。</p>
+<p>街道兩側的建築立面沉穩，電車慢慢穿過路口，咖啡館裡的義式濃縮咖啡一杯接一杯被端上吧台。這座義大利北部城市既是金融與工業中心，也是全球時尚之都。米蘭的時尚不是單純賣衣服，而是一整套關於品味、身分、速度、季節與欲望的語言。</p>
+<p>林又晴站在蒙特拿破崙大街的櫥窗前，鏡頭對著一件白色外套。</p>
+<p>外套剪裁俐落，燈光打得剛好。旁邊的小牌子寫著：</p>
+<p><strong>CONSCIOUS MATERIALS. RESPONSIBLE FUTURE.</strong></p>
+<p>Noah 念了一遍，皺眉。</p>
+<p>「它到底 conscious 在哪裡？」</p>
+<p>林又晴看著牌子。</p>
+<p>「可能它知道自己很貴。」</p>
+<p>沈知行沒有笑。他靠近櫥窗，看著標籤下方更小的字：再生聚酯纖維、有機棉、低環境衝擊染整、負責任供應鏈。</p>
+<p>每一個字他都熟悉。</p>
+<p>也每一個字都可能是真的，或只是真的一部分。</p>
+<p>他們這個月的主題，就是衣服。從設計、材料、品牌、工廠、勞工、染整、運輸、消費、二手、回收，到最後被丟掉。衣服看起來柔軟，但它背後有一條很長的路，路上有棉田、石油、化學纖維、染缸、工廠、貨櫃、倉庫、模特兒、社群廣告、折扣季，以及很多在標籤上看不到的人。</p>
+<p>米蘭的第一位副角叫 Lucia，是一位永續時尚策展人，曾在時尚品牌工作，後來轉向供應鏈透明與材料教育。她約他們在一間小型設計工作室見面。工作室位於老建築二樓，牆上掛著布料樣本、設計草圖、染色實驗與幾張供應鏈地圖。</p>
+<p>Lucia 穿一件深灰色西裝外套，剪裁很好，但袖口有修補痕跡。</p>
+<p>林又晴注意到那道縫線。</p>
+<p>Lucia 笑了笑。</p>
+<p>「我故意留下來。它提醒我，衣服不是因為完美才值得被穿。」</p>
+<p>Noah 立刻看向自己的外套。</p>
+<p>「我的外套也有很多提醒。」</p>
+<p>林又晴說：「你的比較像警告。」</p>
+<p>Lucia 帶他們看一面牆。牆上不是時裝照片，而是一件 T-shirt 的生命路線：棉花種植、紡紗、織布、染整、裁剪、縫製、包裝、運輸、門市、消費者使用、洗滌、丟棄或回收。</p>
+<p>沈知行看著那張圖。</p>
+<p>「一件衣服比它看起來走得遠很多。」</p>
+<p>Lucia 點頭。</p>
+<p>「是的。時尚讓人看到正面，供應鏈藏在背面。永續時尚第一步，就是把背面翻過來。」</p>
+<p>她拿起一件標榜再生材料的運動上衣。</p>
+<p>「這件衣服使用再生聚酯，這是一個進步。但如果它不能耐穿，不能回收，生產過程不透明，工人薪資過低，最後仍然被穿三次就丟掉，那它只是在一個線性系統裡使用比較綠的材料。」</p>
+<p>林又晴問：</p>
+<p>「所以再生材料不等於永續？」</p>
+<p>Lucia 說：</p>
+<p>「對。材料很重要，但不是全部。設計壽命、洗滌方式、產量控制、勞動條件、商業模式、消費速度，都同樣重要。品牌最喜歡談材料，因為材料容易做成標籤。但真正困難的是改變整個速度。」</p>
+<p>Noah 問：</p>
+<p>「速度？」</p>
+<p>Lucia 走到窗邊，看向街上提著購物袋的人。</p>
+<p>「以前時尚有季節。現在平台每天都在催促你覺得自己過時。當衣服被設計成快速上架、快速折扣、快速被遺忘，再好的材料也很難救它。」</p>
+<p>沈知行想起第一個月 Minji 在首爾說的話：零廢棄不是反消費，而是反射性的消費。</p>
+<p>快速時尚最擅長製造的，正是反射。</p>
+<p>你還沒想清楚，就已經按下購買。</p>
+<p>Lucia 請他們坐下，拿出幾份品牌永續報告與 Fashion Transparency Index 的資料。她說，透明不是完美，但沒有透明，社會連追問的起點都沒有。</p>
+<p>「很多品牌會說自己支持工人、使用環保材料、降低碳排。」Lucia 說，「可是它們是否公開供應商名單？是否揭露原料來源？是否說明工資與採購條件？是否讓外界知道承諾如何被驗證？這些才是透明度。」</p>
+<p>林又晴問：</p>
+<p>「如果一個品牌透明，代表它比較好嗎？」</p>
+<p>Lucia 搖頭。</p>
+<p>「不一定。透明只是讓你看得見。看得見之後，才有可能比較、監督、改善。透明不是終點，是打開門。」</p>
+<p>Noah 看著資料，嘆了一口氣。</p>
+<p>「買衣服突然變得像做研究。」</p>
+<p>Lucia 笑了。</p>
+<p>「不需要每次都做博士論文。但至少可以慢一點。問幾個問題：我真的需要嗎？會穿幾次？能不能修？品牌有沒有說清楚？二手是否可以？如果買一件衣服之前多問這些問題，時尚就會慢下來一點。」</p>
+<p>下午，他們走回米蘭街頭。櫥窗依然美麗，布料在燈光下像有自己的呼吸。沈知行不討厭美。相反，他覺得美很重要。問題不是人類愛美，而是當美被速度、過量與不透明綁架時，就會把代價推給遠方的人與土地。</p>
+<p>林又晴拍完一組櫥窗畫面，問：</p>
+<p>「你覺得這個月的第一句筆記是什麼？」</p>
+<p>沈知行看著那件白色外套。</p>
+<p>他說：</p>
+<p>「衣服最會說謊的地方，不是標籤寫了什麼，而是標籤沒寫什麼。」</p>
+<p>Noah 低頭看自己的外套標籤。</p>
+<p>「我的標籤只寫了不可烘乾。」</p>
+<p>林又晴說：</p>
+<p>「這是它唯一誠實的地方。」</p>
+<p>沈知行笑了，在筆記本寫下：</p>
+<p><strong>永續時尚不是把</strong><strong>衣服變綠</strong><strong>，而是讓衣服重新說出它從哪裡來、誰做了它、又將往哪裡去。</strong></p>
+</article>
+<article class="chapter" id="ch2"><div class="chapter-num">SECTION 02</div><h2><span class="city">達卡</span>　標籤背後的人</h2>
+<p>從米蘭到達卡，世界的質地突然改變。</p>
+<p>飛機降落孟加拉首都時，窗外是一片密集的城市肌理。道路、河流、工廠、住宅、屋頂水塔、廣告牌、人群、三輪車、巴士與摩托車交織在一起。達卡是世界上人口最密集的大城市之一，也是全球成衣產業的重要節點。許多在歐美與亞洲市場販售的衣服，都曾經經過孟加拉工人的手。</p>
+<p>一下飛機，熱氣、濕度與車聲同時湧上來。</p>
+<p>Noah 站在機場外，沉默三秒。</p>
+<p>「這裡的交通看起來像即時多人遊戲，但沒有教學模式。」</p>
+<p>林又晴沒有笑。她正在拍遠處的車流。巴士外殼有刮痕，街邊有人推車叫賣，成群工人從一輛小巴上下來，穿過路口，動作熟練地避開車輛與喇叭聲。</p>
+<p>接待他們的是 Nadia，一位成衣工人教育組織的成員。她三十多歲，說話沉穩，眼神很亮。她曾在工廠工作，後來加入非營利組織，協助工人理解勞動權益、安全訓練與申訴機制。</p>
+<p>她見到沈知行第一句話就說：</p>
+<p>「你們來這裡，不要只拍貧窮。」</p>
+<p>沈知行點頭。</p>
+<p>「我們想拍供應鏈裡的人。」</p>
+<p>Nadia 看著他。</p>
+<p>「那就要先承認，他們不是供應鏈的背景。他們是供應鏈本身。」</p>
+<p>她帶他們到一處工人教育中心。空間不大，牆上貼著消防安全、工資計算、勞動法規與健康安全的海報。幾位年輕女性坐在教室裡，正在聽講師說明如何辨識危險建築裂縫與緊急出口。</p>
+<p>林又晴低聲問：</p>
+<p>「這和 Rana Plaza 有關嗎？」</p>
+<p>Nadia 點頭。</p>
+<p>「那是我們無法忘記的名字。」</p>
+<p>2013 年 4 月 24 日，達卡近郊的 Rana Plaza 大樓倒塌，造成超過一千名成衣工人死亡，數千人受傷。它成為全球時尚供應鏈最沉痛的事件之一，也迫使國際品牌、工廠、政府與勞工組織面對工廠安全問題。</p>
+<p>Nadia 帶他們看一張照片。照片中是大樓倒塌後的廢墟，鋼筋、水泥、布料與人的痕跡混在一起。</p>
+<p>Noah 低下頭。</p>
+<p>他平常總是能開玩笑，但這次沒有。</p>
+<p>Nadia 說：</p>
+<p>「很多人記得 Rana Plaza，是因為它很悲劇。但我們不希望世界只用悲劇記得孟加拉工人。我們希望世界記得，衣服背後有真實的人，有技術、有勞動、有家庭、有風險，也有尊嚴。」</p>
+<p>沈知行問：</p>
+<p>「Rana Plaza 之後，有改變嗎？」</p>
+<p>Nadia 想了想。</p>
+<p>「有。工廠安全檢查、建築改善、國際協定、品牌壓力，都帶來一些改變。但問題沒有全部消失。低價、趕工、採購壓力、工資、工會、分包，這些仍然存在。工廠不是單獨運作的，它被全球訂單壓著跑。」</p>
+<p>林又晴問：</p>
+<p>「消費者可以做什麼？」</p>
+<p>Nadia 沒有立刻回答。她看向窗外，外面有人推著布料經過。</p>
+<p>「不要以為只靠買某一件衣服就能拯救工人。」她說，「但也不要說自己完全無能為力。你可以少買、買久一點、要求品牌透明、支持有責任的企業、關心工人聲音。最重要的是，不要把低價當成理所當然。」</p>
+<p>這句話很重。</p>
+<p>Noah 小聲說：</p>
+<p>「低價其實有人付錢，只是不是我付。」</p>
+<p>Nadia 看向他。</p>
+<p>「對。價格如果低到不合理，差額通常在某個地方被別人承擔。」</p>
+<p>下午，他們在 Nadia 的安排下，遠遠拍攝一處工廠區。基於安全與隱私，他們沒有進入廠內，只在外圍看工人換班。成群女性從工廠大門走出來，穿著色彩鮮明的衣服，有人拿著便當盒，有人講電話，有人笑，有人看起來很累。</p>
+<p>林又晴沒有把鏡頭拉得太近。</p>
+<p>她說：</p>
+<p>「我突然不想把她們拍成悲情畫面。」</p>
+<p>沈知行點頭。</p>
+<p>「她們不是用來感動我們的素材。」</p>
+<p>Nadia 聽見後，看了他們一眼，表情柔和了一點。</p>
+<p>傍晚，他們到一間小餐館吃飯。Nadia 點了咖哩、米飯和茶。餐桌旁，Noah 看著自己的 T-shirt，忽然問：</p>
+<p>「我怎麼知道這件衣服是不是在這裡做的？」</p>
+<p>Nadia 說：</p>
+<p>「有時候你不知道。這就是透明的重要。」</p>
+<p>林又晴問：</p>
+<p>「品牌說供應鏈很複雜，是不是合理？」</p>
+<p>Nadia 說：</p>
+<p>「複雜是真的。但複雜不能永遠成為不負責任的理由。品牌知道如何準時拿到貨，知道如何壓價格，知道如何要求品質。如果它們能管理速度與成本，就不能說自己完全不知道工廠發生什麼。」</p>
+<p>沈知行把這句話寫進筆記本。</p>
+<p>過去他在顧問公司時，常聽企業說供應鏈太長、太複雜、太難掌握。他理解那是真的。但此刻坐在達卡，他也更清楚，複雜有時候會變成一種遮蔽。</p>
+<p>如果供應鏈能把一件衣服用最快速度送到米蘭櫥窗，就不能說完全無法把工人的安全與待遇送回品牌決策桌上。</p>
+<p>晚上回旅館時，達卡仍然喧鬧。車燈、喇叭、攤販、人群，整座城市像一台沒有休息的縫紉機。林又晴靠在車窗邊，安靜很久。</p>
+<p>她說：</p>
+<p>「我以前買衣服，只想知道好不好看。現在覺得，可能也該問它累不累。」</p>
+<p>Noah 沒有開玩笑。</p>
+<p>沈知行打開筆記本，寫下：</p>
+<p><strong>每一件便宜得不合理的衣服，都可能藏著一個被壓低聲音的人。</strong></p>
+</article>
+<article class="chapter" id="ch3"><div class="chapter-num">SECTION 03</div><h2><span class="city">台灣紡織聚落</span>　寶特瓶變成衣服以後</h2>
+<p>回到台灣時，雨正在下。</p>
+<p>他們從桃園一路往中部紡織聚落移動。窗外的工業區、河川、稻田、交流道與廠房交錯出一種很台灣的景象：密集、實用、不華麗，卻深深嵌入全球供應鏈。</p>
+<p>台灣紡織業曾經以大量代工、成衣出口聞名，後來在全球競爭下轉向功能性布料、運動紡織、回收材料、技術研發與國際品牌供應鏈。許多國際運動品牌使用的機能布料、回收聚酯、彈性纖維與特殊加工，都可能與台灣廠商有關。</p>
+<p>這一站的副角叫邱啟明，是一家紡織材料公司的第二代經營者。公司規模不算超大，但在回收聚酯纖維與機能布料上有不少研發。他穿著簡單的黑色 Polo 衫，說話有台灣中小企業老闆的速度：直接、務實、略帶疲憊。</p>
+<p>他帶主角群進入展示室。桌上擺著一排透明瓶子、塑膠碎片、再生聚酯粒、紗線、布料與成品衣。</p>
+<p>Noah 拿起一片布料。</p>
+<p>「這真的是寶特瓶做的？」</p>
+<p>邱啟明點頭。</p>
+<p>「寶特瓶先回收、分類、清洗、打碎，變成瓶片，再做成再生聚酯粒，抽絲，織成布。當然中間還有很多品質控制，不是丟進機器就會變衣服。」</p>
+<p>林又晴拍攝桌上的材料轉換。</p>
+<p>「這個過程很適合視覺化。」</p>
+<p>邱啟明笑了。</p>
+<p>「品牌也很愛。因為消費者一看就懂：瓶子變衣服。」</p>
+<p>沈知行問：</p>
+<p>「那你覺得這樣就永續了嗎？」</p>
+<p>邱啟明的笑容淡了一點。</p>
+<p>「沒有那麼簡單。」</p>
+<p>他拿起一件再生聚酯外套。</p>
+<p>「再生材料可以降低對原生石化資源的依賴，也可能減少碳排。但如果品牌每年還是要更多款式、更快交期、更低價格，消費者穿幾次就丟，那我們只是讓過量消費看起來比較綠。」</p>
+<p>這和 Lucia 在米蘭說的話幾乎呼應。</p>
+<p>材料不是全部。</p>
+<p>沈知行問：</p>
+<p>「你們面對國際品牌，最大的壓力是什麼？」</p>
+<p>邱啟明走向窗邊，指著廠區。</p>
+<p>「以前客戶問價格、交期、品質。現在還問碳排、水、化學品、再生比例、供應鏈追溯、人權、能源。這些都應該做，我不反對。但問題是，客戶要求越來越多，價格不一定願意提高。永續變成成本，成本又常被往供應鏈下游壓。」</p>
+<p>林又晴問：</p>
+<p>「所以中小企業會很辛苦？」</p>
+<p>「非常辛苦。」邱啟明說，「大企業有永續部門，有顧問，有系統。中小企業很多時候是老闆、廠長、會計一起做碳盤查。白天趕單，晚上補資料。你說要轉型，我們知道；但怎麼轉、誰付錢、多久回收，這些才是現場。」</p>
+<p>Noah 說：</p>
+<p>「所以永續不是品牌廣告上的綠色照片，而是供應商晚上加班填表？」</p>
+<p>邱啟明笑了。</p>
+<p>「你這句很台灣。」</p>
+<p>他們進入產線參觀。機器聲很大，紗線快速移動，布料一捲一捲成形。現場不是浪漫的，也不是悲情的，而是一種高度專業的工業節奏。工人檢查布面，工程師看數據，技術人員調整設備。</p>
+<p>邱啟明說：</p>
+<p>「台灣紡織現在要走的不是低價，而是技術、材料、認證、速度和可信度。AI、機能布料、運動市場、循環材料，這些都是機會。但如果只做代工，永遠被壓價。永續反而可能是升級的契機。」</p>
+<p>沈知行問：</p>
+<p>「你覺得台灣有機會在永續紡織上建立自己的價值嗎？」</p>
+<p>邱啟明點頭。</p>
+<p>「有。但要說清楚自己的價值不是只會回收寶特瓶，而是能把材料、研發、製程管理、供應鏈透明與品牌合作整合起來。還有，不能只替別人做永續故事，也要有自己的故事。」</p>
+<p>林又晴很喜歡這句話。</p>
+<p>「不能只替別人做永續故事，也要有自己的故事。」</p>
+<p>下午，他們到附近一家小型染整廠。廠長坦白說，染整是高耗水、高耗能、也容易被環保要求盯上的環節。這幾年他們投資節水設備、廢水處理與能源管理，但成本壓力很大。</p>
+<p>廠長說：</p>
+<p>「外面的人看到衣服漂亮，很少想到染色怎麼來。顏色不是免費的。」</p>
+<p>沈知行站在廠房外，聞到空氣裡淡淡的化學氣味。他想起米蘭櫥窗裡那件白色外套，也想起達卡工人教育中心牆上的安全海報。</p>
+<p>一件衣服的世界旅行，不是直線，而是一張網。</p>
+<p>義大利的設計，孟加拉的工人，台灣的材料，日本的機能加工，歐美的品牌，中國或東南亞的組裝，全球的消費者，最後可能進入二手平台、回收系統，或者垃圾掩埋場。</p>
+<p>傍晚，邱啟明請他們在工廠附近吃飯。小餐館裡有炒青菜、滷肉、魚湯和白飯。桌上沒有漂亮擺盤，但味道很實在。</p>
+<p>Noah 問：</p>
+<p>「你自己買衣服會看永續標籤嗎？」</p>
+<p>邱啟明笑了。</p>
+<p>「我看縫線。」</p>
+<p>「縫線？」</p>
+<p>「縫得好不好，布料撐不撐得住，洗幾次會不會變形。耐穿就是最基本的永續。你買一件衣服穿十年，比買十件標榜環保但穿兩次就不穿的衣服實在。」</p>
+<p>林又晴點頭。</p>
+<p>「這句應該放在本月結尾。」</p>
+<p>沈知行卻覺得，這句應該放在更前面。</p>
+<p>因為它太簡單，也太容易被忽略。</p>
+<p>永續時尚最根本的問題，可能不是每件衣服如何被製造，而是人類為什麼需要那麼多衣服。</p>
+<p>他在筆記本寫下：</p>
+<p><strong>最永續</strong><strong>的衣服，不一定是</strong><strong>標籤最綠的</strong><strong>衣服，而是被珍惜、被穿久、被修</strong><strong>好、被好好送往下一站的衣服。</strong></p>
+<p>二手店裡的未來衣櫃</p>
+<p>第五個月最後一週，他們回到台北，拍攝一間二手衣店與一場衣物交換活動。</p>
+<p>店面不大，位於巷弄二樓。樓梯狹窄，牆上貼著活動海報：舊衣交換、修補工作坊、衣櫃整理課、天然染體驗。走進店裡，衣架上掛著各式衣物：牛仔外套、襯衫、洋裝、皮帶、帽子。每件衣服旁邊都有一張小卡，標示材質、狀態、修補處、建議搭配方式。</p>
+<p>店主叫小孟，三十歲出頭，原本做服裝電商，後來轉向二手與衣物循環。她說話很快，但眼神溫柔。</p>
+<p>她拿起一件被修補過的牛仔褲。</p>
+<p>「以前我做電商時，每天看的是上架速度、轉換率、退貨率。後來我發現，我們不是在幫人找到適合的衣服，而是在訓練人一直覺得自己缺衣服。」</p>
+<p>林又晴問：</p>
+<p>「那妳現在怎麼看衣服？」</p>
+<p>小孟說：</p>
+<p>「衣服應該回到關係。它和你的身體、工作、記憶、場合、照顧方式都有關。如果你只把它當成一張照片，很快就會膩。」</p>
+<p>Noah 在一旁翻看一件花襯衫。</p>
+<p>「這件適合我嗎？」</p>
+<p>林又晴看了一眼。</p>
+<p>「適合你迷路。」</p>
+<p>小孟笑著說：</p>
+<p>「其實二手衣最大的挑戰不是貨源，而是心理。很多人覺得二手等於舊、髒、不如人。可是如果整理得好、清洗清楚、故事說得好，它可以很有魅力。」</p>
+<p>沈知行問：</p>
+<p>「二手衣能解決快速時尚問題嗎？」</p>
+<p>小孟搖頭。</p>
+<p>「不能全部解決。如果新衣生產量繼續暴增，二手市場也會被淹沒。二手是延長壽命的一種方式，但源頭仍然要減量。品牌不能一邊大量生產，一邊說二手平台會處理後果。」</p>
+<p>這句話讓沈知行想起斯德哥爾摩 Ingrid 說的：不能只讓丟棄變方便，也要讓不丟棄變方便。</p>
+<p>下午的衣物交換活動開始後，店裡來了十幾個年輕人。有人帶來不再穿的外套，有人帶來買錯尺寸的洋裝，有人帶來一件畢業面試時穿過的襯衫。每件衣服都被放上桌，大家輪流介紹它的故事。</p>
+<p>一位女生拿著一件黑色西裝外套說：</p>
+<p>「這是我第一份工作面試時穿的。我現在用不到了，希望它可以陪別人去一個新的開始。」</p>
+<p>Noah 聽完，小聲說：</p>
+<p>「衣服也會轉職。」</p>
+<p>林又晴沒有笑，她正在拍那件外套。鏡頭裡，衣服不再只是物品，而像是一段人生經驗被交給下一個人。</p>
+<p>沈知行忽然想到 Lucia 在米蘭說的話：衣服不是因為完美才值得被穿。</p>
+<p>也想到 Nadia 在達卡說的話：工人不是供應鏈背景，而是供應鏈本身。</p>
+<p>也想到邱啟明說的話：不能只替別人做永續故事，也要有自己的故事。</p>
+<p>這些話，在二手衣店裡串起來。</p>
+<p>一件衣服的價值，不應該只在被買下那一刻發生。它也可以在被穿久、被修補、被轉送、被交換、被重新理解時，一次又一次發生。</p>
+<p>活動結束後，Noah 最後真的換到那件花襯衫。</p>
+<p>林又晴看著他。</p>
+<p>「你確定？」</p>
+<p>Noah 穿上後轉了一圈。</p>
+<p>「我覺得它和我的靈魂有循環關係。」</p>
+<p>小孟說：</p>
+<p>「至少它沒有進垃圾袋。」</p>
+<p>沈知行看著那件襯衫，忽然覺得很適合這個月。它不新，也不昂貴，不一定符合所有人的審美。但它仍然找到下一個願意穿它的人。</p>
+<p>這就是循環最簡單的版本。</p>
+<p>不是高科技，不是大政策，不是全球品牌宣言。</p>
+<p>而是一件衣服沒有被太早放棄。</p>
+<p>晚上，三人在台北街頭走著。服飾店燈光明亮，折扣標語貼滿櫥窗，年輕人提著紙袋穿過斑馬線。城市繼續販售新的季節、新的風格、新的自我想像。</p>
+<p>林又晴問：</p>
+<p>「你覺得人類會買少一點衣服嗎？」</p>
+<p>沈知行看著街上的櫥窗。</p>
+<p>「很難。」</p>
+<p>Noah 摸著自己的花襯衫。</p>
+<p>「那是不是沒希望？」</p>
+<p>沈知行搖頭。</p>
+<p>「不是。希望不在於每個人都立刻停止購買，而是在於更多人開始知道，一件衣服不只是衣服。」</p>
+<p>他停下腳步，低頭寫下：</p>
+<p><strong>當我們看見衣服背後的人、材料、土地與時間，就不會那麼容易把它當成一次性的自己。</strong></p>
+</article>
+<article class="chapter" id="ch4"><div class="chapter-num">SECTION 04</div><h2><span class="city">本月結語</span>　衣櫃也是一種世界觀</h2>
+<p>第五個月結束時，沈知行開始害怕打開自己的衣櫃。</p>
+<p>不是因為裡面太亂，而是因為每一件衣服突然都變得有聲音。</p>
+<p>那件在倫敦買的襯衫，標籤上寫著葡萄牙製造；那件運動外套，使用再生聚酯；那件便宜 T-shirt，已經洗到領口變形；那件西裝很久沒穿，卻仍然佔著衣櫃最好的位置。</p>
+<p>以前他看衣服，只看場合。</p>
+<p>現在他會想：它從哪裡來？誰做的？材料是什麼？染整用了多少水？工人是否安全？品牌說了多少真話？他穿過幾次？如果不穿了，它還能去哪裡？</p>
+<p>這一個月，他們從米蘭的櫥窗出發，看見綠色標籤如何既可能揭露，也可能遮蔽；在達卡，他們看見標籤背後的人，理解低價的另一端常常有人承擔壓力；在台灣紡織聚落，他們看見寶特瓶如何變成布料，也看見再生材料不能單獨解決過量消費；最後在台北二手衣店，他們看見衣服如何透過交換、修補與再穿，獲得下一段生命。</p>
+<p>林又晴剪完本月影片，片尾放了一個很簡單的畫面。</p>
+<p>不是米蘭櫥窗，也不是達卡工廠，不是台灣產線，也不是二手衣店。</p>
+<p>而是 Noah 穿著那件花襯衫，在台北夜裡走錯路。</p>
+<p>沈知行問：</p>
+<p>「為什麼用這個當結尾？」</p>
+<p>林又晴說：</p>
+<p>「因為它最像一件衣服真的活下來了。」</p>
+<p>Noah 看著螢幕上的自己。</p>
+<p>「我認同。這件襯衫找到一個能理解它混亂美學的人。」</p>
+<p>沈知行笑了。</p>
+<p>他在筆記本寫下第五個月最後一句：</p>
+<p><strong>衣櫃不是私人空間而已，它也是全球化、勞動、資源、審美與欲望交會的小型世界。整理衣櫃，有時也是整理我們和世界的關係。</strong></p>
+<p>第六個月，他們要前往法國、義大利與日本里山，討論食物、土地與慢下來的人。</p>
+<p>Noah 聽到「慢食」兩個字時，眼睛亮了。</p>
+<p>「終於有一個月聽起來主要是吃。」</p>
+<p>林又晴看著他。</p>
+<p>「你不要太高興。上個月你以為驚喜包是高級料理。」</p>
+<p>Noah 說：</p>
+<p>「但它最後也是食物教育。」</p>
+<p>沈知行看著兩人，闔上筆記本。</p>
+<p>是的。</p>
+<p>旅程正在用各種方式教育他們。</p>
+<p>有時是一袋冷掉的可頌。</p>
+<p>有時是一只被修好的行李箱。</p>
+<p>有時，是一件不知道從哪裡來，卻終於被人願意繼續穿下去的花襯衫。</p>
+</article>
+<section class="notes-section" id="notes"><div class="notes-inner"><div class="notes-title">本月真實永續案例筆記與資料來源</div>
+
+</div></section>
+</main>
+<footer>
+  <a href="index.html">永續環遊世界365天　韓千山　著</a>
+</footer>
+</body>
+</html>

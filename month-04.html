@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第四個月　垃圾其實沒有消失｜永續環遊世界365天</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:#8a6f2e;
+  --dark:#0d0c0a;--dark2:#141210;--dark3:#1c1a16;--dark4:#242118;
+  --text:#d4cbbf;--text-dim:#7a7060;--line:rgba(201,168,76,0.18);
+}
+body{background:var(--dark);color:var(--text);font-family:'Noto Serif TC',serif;font-weight:300;line-height:2;font-size:17px;overflow-x:hidden}
+nav{background:var(--dark2);border-bottom:1px solid var(--line);padding:0;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-home{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+.nav-home:hover{color:var(--gold)}
+.nav-toc{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.nav-toc::-webkit-scrollbar{display:none}
+.nav-toc a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:1px;color:var(--text-dim);text-decoration:none;padding:0 14px;white-space:nowrap;line-height:52px;border-bottom:2px solid transparent;transition:all .2s}
+.nav-toc a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.chapter-hero{background:linear-gradient(180deg,var(--dark2) 0%,var(--dark) 100%);border-bottom:1px solid var(--line);padding:80px 40px 64px;text-align:center;position:relative;overflow:hidden}
+.chapter-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-month{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:5px;color:var(--gold);margin-bottom:20px}
+.hero-title{font-size:clamp(24px,4vw,40px);font-weight:700;letter-spacing:3px;line-height:1.4;background:linear-gradient(135deg,#e8c97a,#c9a84c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.hero-cities{font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:4px;color:var(--text-dim)}
+main{max-width:700px;margin:0 auto;padding:72px 32px 100px}
+.chapter{margin-bottom:80px;opacity:0;animation:fadeUp .6s ease forwards}
+.chapter:nth-child(1){animation-delay:.1s}.chapter:nth-child(2){animation-delay:.2s}.chapter:nth-child(3){animation-delay:.3s}.chapter:nth-child(4){animation-delay:.4s}.chapter:nth-child(5){animation-delay:.5s}.chapter:nth-child(6){animation-delay:.6s}
+.chapter-num{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:12px}
+.chapter h2{font-size:clamp(18px,3vw,24px);font-weight:500;line-height:1.5;letter-spacing:1px;color:var(--gold-light);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.chapter h2 .city{font-weight:700;margin-right:4px}
+.chapter p{margin-bottom:1.6em;color:rgba(212,203,191,0.85)}
+.chapter strong{color:var(--text);font-weight:500}
+.notebook{background:rgba(201,168,76,0.06);border-left:2px solid var(--gold);padding:20px 24px;margin:36px 0;font-size:15px;color:var(--gold-light);line-height:2;font-style:italic;position:relative}
+.notebook::before{content:'筆記';display:block;font-family:'Noto Sans TC',sans-serif;font-style:normal;font-size:9px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:8px}
+.signage-wrap{text-align:center;margin:28px 0}
+.signage{display:inline-block;border:1px solid var(--gold-dim);padding:14px 32px;font-size:16px;font-weight:500;letter-spacing:3px;color:var(--gold-light)}
+.notes-section{background:var(--dark2);border-top:1px solid var(--line);padding:64px 32px 80px}
+.notes-inner{max-width:700px;margin:0 auto}
+.notes-title{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:40px}
+.note-card{border-top:1px solid var(--line);padding:28px 0}
+.note-card h3{font-size:15px;font-weight:500;color:var(--gold-light);margin-bottom:16px}
+.note-row{display:flex;gap:16px;font-size:13px;line-height:1.9;margin-bottom:6px}
+.note-label{font-family:'Noto Sans TC',sans-serif;color:var(--gold-dim);white-space:nowrap;min-width:80px}
+.note-val{color:rgba(212,203,191,0.7)}
+footer{background:var(--dark);border-top:1px solid var(--line);padding:40px;text-align:center}
+footer a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){main{padding:48px 20px 80px}.chapter-hero{padding:60px 24px 48px}.notes-section{padding:48px 20px 60px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-home" href="index.html">← 返回目錄</a>
+    <div class="nav-toc">
+      <a href="#ch1">§1</a><a href="#ch2">§2</a><a href="#ch3">§3</a>
+      <a href="#ch4">§4</a><a href="#ch5">§5</a><a href="#notes">案例</a>
+    </div>
+  </div>
+</nav>
+<div class="chapter-hero">
+  <div class="hero-month">MONTH 04</div>
+  <div class="hero-title">垃圾其實沒有消失</div>
+  <div class="hero-cities">柏林　·　斯德哥爾摩　·　台南</div>
+</div>
+<main>
+<article class="chapter" id="ch1"><div class="chapter-num">SECTION 01</div><h2><span class="city">柏林</span>　一只壞掉的行李箱</h2>
+<p>Noah 的行李箱在弗萊堡車站壞掉後，一路拖到柏林。</p>
+<p>說拖，其實不完全準確。比較像是他和行李箱之間進行一種不平等的拉扯。左邊輪子已經歪斜，每走五步就會發出一聲刺耳摩擦，像某種小型金屬動物不滿自己被迫繼續旅行。</p>
+<p>林又晴從後面拍攝他。</p>
+<p>「我覺得它在抗議。」</p>
+<p>Noah 回頭。</p>
+<p>「它不是抗議，它是在用聲音提醒我們進入本月主題。」</p>
+<p>沈知行看著那只行李箱，笑了。</p>
+<p>他們抵達柏林的那天，天空陰冷。柏林不像巴黎那樣精緻，也不像新加坡那樣高度管理。它的街道有一種粗糙、開放、尚未被完全整理好的氣質。牆面上有塗鴉，舊工業建築被改成藝文空間，咖啡館旁可能就是二手商店，地鐵站裡有街頭音樂，也有匆忙、疲憊、沉默的人。</p>
+<p>柏林是一座很適合談「修復」的城市。</p>
+<p>它的歷史本身就像被拆開、破壞、重組、再度生活的過程。戰爭、分裂、圍牆、統一、移民、藝術、抗議、都市更新，都在這座城市留下不平整的痕跡。這裡不太追求完美表面，反而有一種允許裂縫存在的真實感。</p>
+<p>Noah 拖著行李箱走出車站時，輪子終於發出最後一聲尖叫，卡住了。</p>
+<p>他低頭看它。</p>
+<p>「它不走了。」</p>
+<p>林又晴說：「它宣布獨立。」</p>
+<p>沈知行拿出手機，查到附近有一場 Repair Café 活動。</p>
+<p>Noah 看著地址，警覺地問：</p>
+<p>「這次誰帶路？」</p>
+<p>林又晴立即說：</p>
+<p>「不是你。」</p>
+<p>他們走進一間社區中心。門口貼著簡單的紙張，上面用德文和英文寫著：帶你的壞東西來，我們一起試著修。裡面擺著幾張長桌，有工具箱、螺絲起子、針線、膠水、電表、備用零件。人們帶來壞掉的烤麵包機、檯燈、咖啡機、外套拉鍊、收音機、腳踏車燈。</p>
+<p>空氣裡有咖啡、金屬、舊布料與木屑的味道。</p>
+<p>一位頭髮花白的男人抬頭看見 Noah 的行李箱，露出微笑。</p>
+<p>「輪子？」</p>
+<p>Noah 點頭，像病人家屬把病歷交給醫師。</p>
+<p>「它陪我走過很多地方。」</p>
+<p>男人說：「那我們先不要判它死刑。」</p>
+<p>他叫 Lukas，是柏林修復文化倡議者，也是這場 Repair Café 的志工。他年輕時做過機械工程師，退休後開始參與修復活動。他說，許多人帶來的東西其實並不是完全壞掉，只是失去了一個小零件、一條線、一顆螺絲，或者失去了一個願意花時間看它的人。</p>
+<p>Lukas 把 Noah 的行李箱倒過來，檢查輪軸。</p>
+<p>「你知道現代物品最奇怪的地方是什麼嗎？」他問。</p>
+<p>Noah 說：「壞得太快？」</p>
+<p>「不是。」Lukas 說，「是它們常常被設計成讓你覺得不值得修。」</p>
+<p>沈知行坐在旁邊，打開筆記本。</p>
+<p>Lukas 拿起螺絲起子，拆開輪座。</p>
+<p>「如果零件買不到，螺絲規格特殊，外殼黏死，維修手冊不公開，修理費接近新品價格，消費者最後就會說：算了，買新的。這不是自然選擇，這是設計出來的丟棄。」</p>
+<p>林又晴問：</p>
+<p>「所以修復權不是懷舊？」</p>
+<p>Lukas 抬頭看她。</p>
+<p>「不是。修復權是權力問題。誰有權打開產品？誰能取得零件？誰能知道它怎麼工作？如果你買了一個東西，卻沒有能力讓它延長生命，那你其實只是在租用它直到它壞掉。」</p>
+<p>Noah 聽得很認真。</p>
+<p>「那我的行李箱還有救嗎？」</p>
+<p>Lukas 看了看輪子。</p>
+<p>「有。它只是需要一個新軸承，還有一點尊嚴。」</p>
+<p>林又晴差點笑出聲。</p>
+<p>在另一張桌子旁，一位年輕女孩帶來祖母留下的檯燈。燈座舊了，電線也老化。志工一邊更換電線，一邊向她解釋怎麼判斷用電安全。女孩拿出手機拍下過程，不是為了社群，而是想回家後告訴祖母，燈沒有被丟掉。</p>
+<p>沈知行看著那盞檯燈，突然覺得修復不是單純的減廢行為。</p>
+<p>修復也在修一段關係。</p>
+<p>人與物的關係，人與技術的關係，人與記憶的關係，人與社區的關係。</p>
+<p>過去幾十年，消費文化訓練人快速替換。壞掉代表過時，過時代表淘汰，淘汰代表可以購買新的。但 Repair Café 裡的時間不一樣。這裡的人不急著結帳，不急著丟棄，也不急著把失敗藏起來。大家坐下來，看著東西如何壞掉，也一起試著讓它回來。</p>
+<p>Lukas 修好行李箱時，Noah 推著它在社區中心繞了一圈。輪子不再尖叫，只發出穩定的滾動聲。</p>
+<p>Noah 像完成一場小型復活儀式。</p>
+<p>「它回來了。」</p>
+<p>Lukas 把工具收好。</p>
+<p>「記得，修好不是結束。你現在知道它哪裡脆弱，下次就會更小心使用。」</p>
+<p>沈知行問：</p>
+<p>「你覺得修復文化最重要的是減少垃圾嗎？」</p>
+<p>Lukas 想了一下。</p>
+<p>「減少垃圾很重要，但更重要的是讓人重新相信自己不是只能當消費者。你也可以理解、維護、參與、改造。當人只會買新的，就會忘記自己也可以修世界。」</p>
+<p>這句話讓沈知行很久沒有落筆。</p>
+<p>離開社區中心時，柏林的天色暗了。街角有一家二手家具店，櫥窗裡擺著幾張舊椅子，有些木頭刮痕明顯，但被擦得很乾淨。旁邊是一家咖啡館，桌椅不成套，牆上的燈罩也不一樣，卻有一種非常舒適的完整感。</p>
+<p>林又晴看著 Noah 的行李箱。</p>
+<p>「它現在看起來有故事了。」</p>
+<p>Noah 說：</p>
+<p>「它以前也有故事，只是現在多了一章受難與重生。」</p>
+<p>沈知行笑著打開筆記本，寫下本月第一句：</p>
+<p><strong>被修好的東西，不只是延長了使用壽命，也延長了人願意負責的時間。</strong></p>
+</article>
+<article class="chapter" id="ch2"><div class="chapter-num">SECTION 02</div><h2><span class="city">柏林</span>　垃圾桶不是故事的結尾</h2>
+<p>第二天，他們去參觀柏林一處再利用與二手物品中心。</p>
+<p>那是一棟由舊倉庫改造的空間，裡面有家具、餐具、燈具、書籍、腳踏車零件、木材、舊門板、展示架。這些東西原本可能進入廢棄物流，但在這裡被分類、修整、重新標價。有些被藝術家買走，有些被學生帶回宿舍，有些被小餐館改造成店內裝潢。</p>
+<p>接待他們的是 Ayla，一位土耳其裔德國女性，負責二手物品再流通計畫。她說話直接，走路很快，像是每天都在和物品、物流、人力與租金賽跑。</p>
+<p>她拿起一張木椅。</p>
+<p>「這張椅子來的時候，只有一隻腳鬆了。」</p>
+<p>Noah 問：「所以它差點變成垃圾？」</p>
+<p>Ayla 點頭。</p>
+<p>「很多垃圾其實只是缺少一道判斷。它是不能用了，還是沒有人願意處理？這兩件事差很多。」</p>
+<p>林又晴拍攝架上的物品。</p>
+<p>「可是整理這些東西也要成本。分類、倉儲、修理、銷售，會不會比直接丟掉更麻煩？」</p>
+<p>Ayla 笑了。</p>
+<p>「當然麻煩。循環經濟不是魔法。它需要空間、制度、人力、技術、物流，也需要市場願意接受不是全新的東西。」</p>
+<p>沈知行問：</p>
+<p>「那你們怎麼讓人願意買二手？」</p>
+<p>Ayla 指著牆上一張海報。上面不是寫「環保救地球」，而是寫著：舊東西，新房間。</p>
+<p>「不要只用道德說服人。」她說，「要讓二手變得好看、可靠、有故事，也有價格優勢。很多人不是不接受二手，是不接受髒、亂、不確定。循環要成為主流，就不能只靠少數人的信仰。」</p>
+<p>沈知行覺得這句話和前幾個月的觀察相互呼應。</p>
+<p>自行車城市不是靠說服每個人愛地球，而是讓騎車變方便。</p>
+<p>綠建築不是要求人忍耐，而是讓舒適不那麼浪費。</p>
+<p>二手與修復也不是要求人退回貧乏生活，而是讓物品有第二次被喜歡的機會。</p>
+<p>Ayla 帶他們到後方工作區。一位年輕木工正在把舊桌板切割成新的展示架。另一位志工替一批舊餐盤分類，挑出可再出售的部分。角落有一堆無法修復的木材，準備拆解後交給下一道回收流程。</p>
+<p>「不是所有東西都能回到原本用途。」Ayla 說，「但很多東西可以降階使用、拆解使用、材料再利用。問題是，我們要在它被燒掉或掩埋前，替它多問幾個問題。」</p>
+<p>林又晴問：</p>
+<p>「什麼問題？」</p>
+<p>Ayla 扳著手指說：</p>
+<p>「它能不能直接再用？能不能修？能不能拆零件？能不能變材料？能不能共享？能不能借？能不能不要一開始就生產那麼多？」</p>
+<p>Noah 聽完說：</p>
+<p>「所以垃圾桶之前其實有很多岔路。」</p>
+<p>Ayla 點頭。</p>
+<p>「對。垃圾桶是最後一個選項，不是第一個。」</p>
+<p>中午，他們在附近一間小餐館吃飯。餐館裡的桌椅幾乎全是二手的，菜單用舊門板改成，燈具來自拆除建築。可是整體並不破舊，反而有一種溫暖的混搭感。</p>
+<p>林又晴說：</p>
+<p>「我以前以為循環就是資源回收，今天覺得比較像替東西安排第二人生。」</p>
+<p>沈知行說：</p>
+<p>「回收是重要的，但回收通常已經是末端了。真正好的循環，是越早介入越好。設計時就考慮可修、可拆、可再用，使用時延長壽命，淘汰前先流通，最後才回收。」</p>
+<p>Noah 看著自己的行李箱。</p>
+<p>「聽起來像人生規劃。」</p>
+<p>林又晴說：</p>
+<p>「你的行李箱比你有規劃。」</p>
+<p>Noah 沒有反駁。</p>
+<p>下午離開前，Ayla 帶他們看一面牆。牆上貼著幾張照片，記錄一些物品改造前後的樣子：舊窗框變成咖啡館隔屏，木棧板變成長椅，廢棄布料變成包袋，老式收銀台變成展覽櫃。</p>
+<p>Ayla 指著照片說：</p>
+<p>「有時候，城市拆掉一棟建築，不只是產生廢棄物，也失去材料記憶。循環不是把所有東西都留下來，而是判斷什麼值得留下，什麼可以轉化。」</p>
+<p>沈知行站在那面牆前，忽然想到柏林這座城市本身。</p>
+<p>它也一直在判斷什麼該保留、什麼該拆除、什麼可以轉化。歷史的碎片沒有完全消失，而是以不同形式回到街道、牆面、博物館、藝術空間與居民記憶裡。</p>
+<p>他在筆記本寫下：</p>
+<p><strong>垃圾不是東西死亡的名字，而是人類暫時想不到下一種關係時，給它的標籤。</strong></p>
+</article>
+<article class="chapter" id="ch3"><div class="chapter-num">SECTION 03</div><h2><span class="city">斯德哥爾摩</span>　會分類的城市</h2>
+<p>斯德哥爾摩的光很乾淨。</p>
+<p>它不像柏林那樣粗糙，也不像巴黎那樣帶著歷史的金色。這座城市分布在島嶼之間，湖水與海水交會，橋梁連接不同區域。老城區的石板路、王宮、教堂與彩色建築保留著北歐歷史；新的住宅區、科技公司、設計品牌與公共設施則讓城市顯得冷靜、有效率，也有一種略帶距離的美。</p>
+<p>林又晴站在水邊拍攝城市天際線。</p>
+<p>「這裡的水好像讓城市比較不急。」</p>
+<p>Noah 把外套拉緊。</p>
+<p>「我只覺得風讓我比較想回室內。」</p>
+<p>沈知行看著遠處。瑞典常被提到的環境治理包括回收、能源、廢棄物處理、區域供熱、循環設計等，但他知道「瑞典很會回收」這句話太簡單。真正要問的是：回收制度如何被設計？居民如何參與？焚化發電與減量之間有沒有張力？當一個國家太會處理垃圾，會不會反而降低減少垃圾的壓力？</p>
+<p>接待他們的是 Ingrid，一位斯德哥爾摩城市環境顧問，過去曾在廢棄物管理與資源循環專案工作。她把他們帶到一處住宅社區的分類空間。</p>
+<p>那不是髒亂的垃圾間，而是一間明亮、乾淨、標示清楚的資源回收室。紙類、塑膠、金屬、玻璃、有機廢棄物、電子廢棄物，各有不同容器。牆上有圖示，也有多語說明。</p>
+<p>Noah 看著分類標示。</p>
+<p>「這比我大學選課系統還清楚。」</p>
+<p>Ingrid 微笑。</p>
+<p>「如果你希望居民分類，就不要把分類設計得像考試。」</p>
+<p>林又晴問：</p>
+<p>「分類真的有這麼重要嗎？有些人會說，後端處理才是關鍵。」</p>
+<p>Ingrid 點頭。</p>
+<p>「後端很重要，但前端分類決定材料品質。混在一起的東西比較難再利用，也更容易污染。循環經濟需要乾淨的材料流，而乾淨材料流來自日常行為與制度設計。」</p>
+<p>沈知行問：</p>
+<p>「瑞典常被稱讚廢棄物處理有效率，但也有人批評焚化發電會讓社會繼續產生垃圾。你怎麼看？」</p>
+<p>Ingrid 的表情變得認真。</p>
+<p>「這是很重要的批評。能源回收比掩埋好，但不應該成為製造垃圾的藉口。廢棄物階層裡，預防、減量、再使用、修復，應該在回收與能源回收之前。焚化可以處理剩餘物，但不能成為循環經濟的核心想像。」</p>
+<p>這句話讓沈知行立刻記下來。</p>
+<p>廢棄物階層不是新的概念，但在現場聽到特別有重量。因為很多城市喜歡把末端處理包裝成成功，卻不願面對前端消費與生產模式仍然過量。</p>
+<p>Ingrid 帶他們到另一處資源中心。那裡收集居民不要但仍可用的物品：書、玩具、小家具、餐具、燈具。居民可以放下，也可以取走。空間旁邊還有電子廢棄物回收點與危險廢棄物收集區。</p>
+<p>林又晴拍攝一個小男孩把玩具車放到交換架上，然後挑了一本圖畫書帶走。</p>
+<p>她小聲說：</p>
+<p>「這比丟掉溫柔。」</p>
+<p>Ingrid 聽見了。</p>
+<p>「是的。再使用需要的不只是制度，也是一種文化。你要讓人覺得，把東西交給下一個人，不是失敗，也不是貧窮，而是很正常。」</p>
+<p>Noah 問：</p>
+<p>「可是如果所有東西都這麼有效率地被處理，人會不會更放心地丟？」</p>
+<p>Ingrid 點頭。</p>
+<p>「會。所以我們不能只讓丟棄變方便，也要讓不丟棄變方便。比如借用、共享、維修、二手交換、押金制度、產品設計責任。」</p>
+<p>沈知行忽然想到第一個月的巴黎。剩食平台讓食物不被浪費，但也不能讓店家忽略前端備料管理。第三個月的新加坡智慧建築讓能源使用更有效率，但也不能變成過度舒適的藉口。第四個月的斯德哥爾摩同樣提醒：有效率的末端管理，不能取代源頭減量。</p>
+<p>晚上，他們與 Ingrid 在一間小餐館用餐。餐館強調在地食材與減少剩食，菜單會依當天可取得食材調整。Noah 看到菜單上有醃鯡魚，表情出現短暫猶豫。</p>
+<p>林又晴問：</p>
+<p>「你怕？」</p>
+<p>Noah 說：</p>
+<p>「我尊重文化，但文化也應該尊重我的味覺。」</p>
+<p>Ingrid 笑了，替他推薦了比較安全的選項。</p>
+<p>餐後，他們走出餐館。斯德哥爾摩的夜很冷，水面倒映著燈光。街道乾淨得近乎安靜，但沈知行知道，乾淨不代表沒有垃圾。只是這座城市花了很多力氣，讓垃圾在居民看不見前，先被分類、被收集、被送往不同系統。</p>
+<p>然而，真正的永續不是讓垃圾消失在視線之外。</p>
+<p>而是讓人誠實面對：它去了哪裡？變成什麼？誰處理它？處理的能源與成本是多少？為什麼它一開始會被製造出來？</p>
+<p>他在筆記本寫下：</p>
+<p><strong>乾淨的城市，不一定是垃圾少的城市；真正成熟的城市，是願意追問垃圾去哪裡的城市。</strong></p>
+</article>
+<article class="chapter" id="ch4"><div class="chapter-num">SECTION 04</div><h2><span class="city">台南</span>　舊東西不是落後</h2>
+<p>第四個月的最後一站，是台南。</p>
+<p>從斯德哥爾摩回到台灣，氣候像突然翻頁。台南的陽光明亮，空氣裡有食物、機車、廟香、老屋木頭、潮濕牆面與海風混合的味道。這座城市是台灣最早發展的城市之一，曾是政治、商業與文化中心。它有府城歷史、廟宇、老街、傳統市場、夜市、小吃、鹽田、港口記憶，也有南科、觀光、人潮與現代生活的壓力。</p>
+<p>台南適合談循環，不是因為它有最先進的回收技術，而是因為這裡讓人看見另一種時間。</p>
+<p>很多東西不是因為被稱為「永續」才留下來，而是因為生活原本就懂得惜物、修補、再用、轉手與共食。</p>
+<p>接待他們的是阿霞，台南一間老市場小吃攤的第二代，也是地方減塑與循環餐具推動者。她三十多歲，說話爽快，手腳很快，笑起來很有感染力。</p>
+<p>她第一次見到 Noah 的行李箱時，立刻說：</p>
+<p>「這個輪子修過喔。」</p>
+<p>Noah 很驕傲。</p>
+<p>「柏林修復權。」</p>
+<p>阿霞點頭。</p>
+<p>「我們這裡叫不要浪費錢。」</p>
+<p>林又晴笑了。</p>
+<p>阿霞帶他們走進市場。攤販叫賣聲、切菜聲、機車聲、鍋鏟聲混在一起。魚攤旁邊有賣菜的阿姨，肉攤後方有老闆正在整理紙箱，一位老人拿著自己的塑膠袋買豆腐。市場不像新加坡綠建築那樣精準，也不像斯德哥爾摩分類室那樣整潔，但它有強烈的生活循環感。</p>
+<p>紙箱會被留起來再用，塑膠袋被摺好塞進抽屜，剩菜可能變成員工餐，桶子、籃子、玻璃罐、舊椅子、老桌子都在不同角色裡繼續服役。</p>
+<p>阿霞說：</p>
+<p>「你們外國案例都很漂亮，有制度、有標章、有報告。可是台灣很多循環以前不是叫循環，是叫惜物。」</p>
+<p>沈知行問：</p>
+<p>「那現在為什麼還需要推動循環餐具、減塑？」</p>
+<p>阿霞指著市場外一整排外帶飲料杯與便當盒。</p>
+<p>「因為生活變快了。以前很多東西會留下來，是因為大家沒那麼有錢，也沒那麼方便。現在方便到一個程度，人就懶得留下來。惜物文化如果沒有新的系統接住，就會被一次性用品打敗。」</p>
+<p>這句話讓沈知行覺得很準。</p>
+<p>傳統社會的惜物，不等於現代循環經濟。前者來自生活習慣與資源有限，後者需要制度、設計、物流、清洗、消費者誘因與商業模式。若只是懷舊，無法處理手搖飲、外送、便利商店、夜市、觀光人潮帶來的大量一次性包材。</p>
+<p>阿霞帶他們到一處與店家合作的循環杯與循環餐具借還點。那是一個不大的櫃位，放著可重複使用的杯子與餐盒，有 QR code、押金或會員制度，也有清洗回收流程的說明。</p>
+<p>Noah 拿起一個杯子。</p>
+<p>「所以我可以借這個買飲料，喝完再還？」</p>
+<p>阿霞說：</p>
+<p>「對。但難的是讓你記得還。」</p>
+<p>林又晴問：</p>
+<p>「大家接受度高嗎？」</p>
+<p>阿霞嘆了一口氣。</p>
+<p>「有些人支持，有些人嫌麻煩。有些店家覺得多一個流程，有些消費者怕不乾淨。推這種事情，不能只說環保，要把清洗、衛生、歸還、押金、店家動線都想好。不然理念很好，現場會很痛苦。」</p>
+<p>沈知行問：</p>
+<p>「那妳為什麼還想做？」</p>
+<p>阿霞看著市場裡來來去去的人。</p>
+<p>「因為如果連我們這種每天產生一堆外帶的地方都不試，那永續就只會留在咖啡廳和展覽裡。」</p>
+<p>這句話讓林又晴放下相機，看著她。</p>
+<p>「妳很會講。」</p>
+<p>阿霞笑了。</p>
+<p>「我不是會講，我是每天被垃圾袋教育。」</p>
+<p>下午，他們跟著阿霞去看一間老屋再生空間。那是一棟老宅改成的小型共學場域，保留木窗、磨石子地板與部分老牆，裡面舉辦地方導覽、修繕工作坊、剩食料理課與二手交換市集。</p>
+<p>牆上貼著一句話：</p>
+<div class="signage-wrap"><div class="signage">舊不是問題，不能再被使用才是問題。</div></div>
+<p>沈知行站在那句話前，想到柏林的 Repair Café、斯德哥爾摩的資源中心，也想到台南市場裡被重複使用的紙箱與塑膠袋。</p>
+<p>台南不是歐洲案例的複製品。它有自己的矛盾：老城觀光化、外帶文化、騎樓被占用、機車便利、夜市垃圾、老屋保存與開發壓力。但它也有自己的底氣：市場、廟口、街坊、熟人網絡、手藝、修補、地方食物、生活密度。</p>
+<p>永續如果要在台灣真正落地，就不能只搬用歐洲語言。它必須聽得懂市場阿姨、夜市攤商、廟口居民、小吃店老闆、飲料店員工的語言。</p>
+<p>晚上，他們在夜市拍攝。人潮很多，香氣濃烈。蚵仔煎、牛肉湯、鱔魚意麵、地瓜球、青草茶、炸物、手搖飲。一次性餐具也很多，垃圾桶很快被塞滿。</p>
+<p>林又晴看著滿出來的垃圾桶，問阿霞：</p>
+<p>「妳會不會有時候覺得很無力？」</p>
+<p>阿霞沒有立刻回答。</p>
+<p>她看著夜市裡排隊的人。</p>
+<p>「會啊。但我也覺得，台灣人的生活很有生命力。你不能只看到垃圾，也要看到為什麼大家喜歡這裡。永續不是把夜市變成安靜乾淨到沒有味道的地方，而是讓它不要用那麼多一次性東西，還能保留熱鬧。」</p>
+<p>Noah 拿著循環杯買了一杯青草茶，喝完後非常認真地問：</p>
+<p>「我要去哪裡還？」</p>
+<p>阿霞指著前面。</p>
+<p>「看到那個藍色櫃子沒有？」</p>
+<p>Noah 點頭，走過去，結果把杯子放到一般回收籃。</p>
+<p>阿霞大喊：</p>
+<p>「不是那裡！」</p>
+<p>林又晴笑到相機都晃了。</p>
+<p>Noah 把杯子拿回來，尷尬地說：</p>
+<p>「循環經濟需要更清楚的導引。」</p>
+<p>阿霞說：</p>
+<p>「對，這就是現場。」</p>
+<p>沈知行看著這一幕，忽然覺得很重要。很多政策在文件裡看起來簡單：借、用、還、洗、再借。可是到了夜市現場，人的注意力被食物、人潮、付款、聊天、孩子、機車、排隊分散。循環系統若不能在混亂中仍然好用，就很難成為大眾生活。</p>
+<p>他在筆記本寫下：</p>
+<div class="notebook">台灣的永續挑戰，不是缺少理念，而是要讓理念穿過熱鬧、方便與混亂，仍然能被使用。</div>
+</article>
+<article class="chapter" id="ch5"><div class="chapter-num">SECTION 05</div><h2><span class="city">本月結語</span>　丟掉以前，先多問一次</h2>
+<p>第四個月結束時，Noah 的行李箱仍然活著。</p>
+<p>輪子雖然不再完美，但可以穩定滾動。柏林的修復志工給它換了零件，斯德哥爾摩的冷風測試過它的耐力，台南夜市的地面又讓它多了幾道刮痕。它看起來更舊了，但也更像這趟旅程的一部分。</p>
+<p>林又晴整理素材時，把這只行李箱剪成一條小副線：壞掉、修好、繼續使用、再次磨損、再次被照顧。</p>
+<p>她說：</p>
+<p>「這個月其實可以叫《行李箱沒有死》。」</p>
+<p>Noah 點頭。</p>
+<p>「我支持。它是一個英雄。」</p>
+<p>沈知行說：</p>
+<p>「它不是英雄。它只是沒有被太早放棄。」</p>
+<p>這句話說出口後，三個人都安靜了一下。</p>
+<p>第四個月，他們看到的不是單一技術，而是一整套重新對待物品的方式。</p>
+<p>柏林讓他們看見修復權與修復文化：物品壞掉時，人不一定只能購買新的。斯德哥爾摩讓他們看見分類、回收與廢棄物治理的制度能力，但也提醒末端處理不能取代源頭減量。台南讓他們看見傳統惜物文化與現代一次性便利之間的衝突，也看見循環杯、老屋再生、市場再利用如何在混亂生活中尋找位置。</p>
+<p>沈知行過去常在企業簡報中使用「循環經濟」四個字。那時它看起來像一個模型：設計、生產、使用、回收、再製造。箭頭很漂亮，流程很乾淨。</p>
+<p>可是現場不是箭頭。</p>
+<p>現場是壞掉的輪子、找不到的零件、志工的手、分類錯誤的杯子、夜市滿出來的垃圾桶、店家嫌麻煩的表情、阿霞不願放棄的聲音。</p>
+<p>真正的循環不是畫出一個圓，而是讓很多不完美的人願意把那個圓補起來。</p>
+<p>第四個月最後一天，他們坐在台南一間老屋咖啡館裡。午後陽光從木窗灑進來，牆面有修補痕跡，地板有歲月磨出的暗光。外面傳來機車聲與廟口廣播，屋內有咖啡香，也有舊木頭被熱氣喚醒的味道。</p>
+<p>阿霞送來一盤用市場剩餘水果做的甜點。</p>
+<p>Noah 吃了一口，眼睛亮起來。</p>
+<p>「剩食也可以這麼好吃？」</p>
+<p>阿霞說：</p>
+<p>「剩食不是不好吃，是你以前太快判它出局。」</p>
+<p>沈知行看著那盤水果，想起這一整個月所有被判出局的東西：行李箱、檯燈、木椅、舊門板、玻璃罐、老屋、夜市裡差點被丟掉的杯子。</p>
+<p>他打開筆記本，寫下第四個月最後一句：</p>
+<p><strong>垃圾其實沒有消失。它只是離開我們的視線，去到某個地方，等待我們承認自己曾經太快放手。</strong></p>
+<p>第五個月，他們要去米蘭、達卡與台灣紡織聚落，追蹤一件衣服的世界旅行。</p>
+<p>Noah 看了一眼自己的外套。</p>
+<p>「我現在開始害怕衣服也有身世。」</p>
+<p>林又晴說：</p>
+<p>「每件衣服都有，只是你以前不問。」</p>
+<p>沈知行闔上筆記本。</p>
+<p>窗外的台南仍然熱鬧。城市不完美，街道不完美，循環系統也不完美。但也許永續本來就不是完美，而是某種願意再試一次的能力。</p>
+<p>在丟掉以前，先多問一次。</p>
+<p>還能不能修？</p>
+<p>還能不能用？</p>
+<p>還能不能給下一個人？</p>
+<p>還能不能變成別的東西？</p>
+<p>還能不能不要那麼快結束？</p>
+</article>
+<section class="notes-section" id="notes"><div class="notes-inner"><div class="notes-title">本月真實永續案例筆記與資料來源</div>
+
+</div></section>
+</main>
+<footer>
+  <a href="index.html">永續環遊世界365天　韓千山　著</a>
+</footer>
+</body>
+</html>

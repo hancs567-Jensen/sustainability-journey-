@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三個月　會呼吸的房子｜永續環遊世界365天</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:#8a6f2e;
+  --dark:#0d0c0a;--dark2:#141210;--dark3:#1c1a16;--dark4:#242118;
+  --text:#d4cbbf;--text-dim:#7a7060;--line:rgba(201,168,76,0.18);
+}
+body{background:var(--dark);color:var(--text);font-family:'Noto Serif TC',serif;font-weight:300;line-height:2;font-size:17px;overflow-x:hidden}
+nav{background:var(--dark2);border-bottom:1px solid var(--line);padding:0;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-home{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+.nav-home:hover{color:var(--gold)}
+.nav-toc{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.nav-toc::-webkit-scrollbar{display:none}
+.nav-toc a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:1px;color:var(--text-dim);text-decoration:none;padding:0 14px;white-space:nowrap;line-height:52px;border-bottom:2px solid transparent;transition:all .2s}
+.nav-toc a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.chapter-hero{background:linear-gradient(180deg,var(--dark2) 0%,var(--dark) 100%);border-bottom:1px solid var(--line);padding:80px 40px 64px;text-align:center;position:relative;overflow:hidden}
+.chapter-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-month{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:5px;color:var(--gold);margin-bottom:20px}
+.hero-title{font-size:clamp(24px,4vw,40px);font-weight:700;letter-spacing:3px;line-height:1.4;background:linear-gradient(135deg,#e8c97a,#c9a84c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.hero-cities{font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:4px;color:var(--text-dim)}
+main{max-width:700px;margin:0 auto;padding:72px 32px 100px}
+.chapter{margin-bottom:80px;opacity:0;animation:fadeUp .6s ease forwards}
+.chapter:nth-child(1){animation-delay:.1s}.chapter:nth-child(2){animation-delay:.2s}.chapter:nth-child(3){animation-delay:.3s}.chapter:nth-child(4){animation-delay:.4s}.chapter:nth-child(5){animation-delay:.5s}.chapter:nth-child(6){animation-delay:.6s}
+.chapter-num{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:12px}
+.chapter h2{font-size:clamp(18px,3vw,24px);font-weight:500;line-height:1.5;letter-spacing:1px;color:var(--gold-light);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.chapter h2 .city{font-weight:700;margin-right:4px}
+.chapter p{margin-bottom:1.6em;color:rgba(212,203,191,0.85)}
+.chapter strong{color:var(--text);font-weight:500}
+.notebook{background:rgba(201,168,76,0.06);border-left:2px solid var(--gold);padding:20px 24px;margin:36px 0;font-size:15px;color:var(--gold-light);line-height:2;font-style:italic;position:relative}
+.notebook::before{content:'筆記';display:block;font-family:'Noto Sans TC',sans-serif;font-style:normal;font-size:9px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:8px}
+.signage-wrap{text-align:center;margin:28px 0}
+.signage{display:inline-block;border:1px solid var(--gold-dim);padding:14px 32px;font-size:16px;font-weight:500;letter-spacing:3px;color:var(--gold-light)}
+.notes-section{background:var(--dark2);border-top:1px solid var(--line);padding:64px 32px 80px}
+.notes-inner{max-width:700px;margin:0 auto}
+.notes-title{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:40px}
+.note-card{border-top:1px solid var(--line);padding:28px 0}
+.note-card h3{font-size:15px;font-weight:500;color:var(--gold-light);margin-bottom:16px}
+.note-row{display:flex;gap:16px;font-size:13px;line-height:1.9;margin-bottom:6px}
+.note-label{font-family:'Noto Sans TC',sans-serif;color:var(--gold-dim);white-space:nowrap;min-width:80px}
+.note-val{color:rgba(212,203,191,0.7)}
+footer{background:var(--dark);border-top:1px solid var(--line);padding:40px;text-align:center}
+footer a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){main{padding:48px 20px 80px}.chapter-hero{padding:60px 24px 48px}.notes-section{padding:48px 20px 60px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-home" href="index.html">← 返回目錄</a>
+    <div class="nav-toc">
+      <a href="#ch1">§1</a><a href="#ch2">§2</a><a href="#ch3">§3</a>
+      <a href="#ch4">§4</a><a href="#ch5">§5</a><a href="#notes">案例</a>
+    </div>
+  </div>
+</nav>
+<div class="chapter-hero">
+  <div class="hero-month">MONTH 03</div>
+  <div class="hero-title">會呼吸的房子</div>
+  <div class="hero-cities">新加坡　·　東京　·　弗萊堡</div>
+</div>
+<main>
+<article class="chapter" id="ch1"><div class="chapter-num">SECTION 01</div><h2><span class="city">新加坡</span>　冷氣不是唯一答案</h2>
+<p>飛機降落新加坡時，玻璃窗外是一片濕亮的綠。</p>
+<p>新加坡的綠，不像歐洲城市那種從歷史縫隙裡長出來的綠，也不像台灣山城裡帶著野性的綠。它更像被精密規劃過的綠：樹冠、道路、天橋、建築立面、垂直花園、捷運站出口，全都被納入一套高度管理的城市系統裡。這座城市國家土地有限、人口密集、氣候炎熱，卻又把花園城市、金融中心、港口經濟與熱帶都市治理揉在一起，形成一種非常新加坡式的秩序。</p>
+<p>Noah 一走出機場，就伸手摸了摸自己的額頭。</p>
+<p>「這裡的空氣像剛洗完澡還沒擦乾。」</p>
+<p>林又晴把鏡頭轉向他。</p>
+<p>「請問這是你對熱帶永續城市的第一個觀察嗎？」</p>
+<p>「是。」Noah 說，「我的身體正在進行濕度壓力測試。」</p>
+<p>沈知行沒有笑。他看著機場外快速移動的人流，想到新加坡的特殊處境：它沒有廣大的腹地，能源與水資源高度依賴外部供應，城市又必須在熱帶高溫與高密度中保持經濟競爭力。對這樣的城市來說，永續不是裝飾，而是生存策略。</p>
+<p>他們這個月的第一站，是一棟位於市中心的綠建築。</p>
+<p>接待他們的是 Arjun，一位新加坡綠建築工程師。他四十歲左右，穿著白襯衫，說話溫和，語氣裡有工程師特有的精準。他沒有先帶他們看大廳，也沒有先講認證，而是把他們帶到建築外側的遮陽立面前。</p>
+<p>那是一層有節奏的外遮陽系統，金屬格柵與綠植交錯，像建築替自己長出一層會過濾陽光的皮膚。</p>
+<p>Arjun 說：</p>
+<p>「在熱帶城市，第一個問題不是如何製造冷氣，而是如何少需要冷氣。」</p>
+<p>Noah 立刻點頭。</p>
+<p>「我支持冷氣，但我也支持少痛苦。」</p>
+<p>林又晴問：</p>
+<p>「可是新加坡這麼熱，真的可以少用冷氣嗎？」</p>
+<p>Arjun 沒有直接回答。他帶他們走進中庭。中庭挑高，空氣比外面涼，但不是那種冷到讓人起雞皮疙瘩的商場溫度。光從上方灑下來，被遮陽構件切成柔和的塊狀。植物沿著牆面垂下，風從開口處流動，空間裡有一種緩慢呼吸的感覺。</p>
+<p>「舒適不等於低溫。」Arjun 說，「這是很多城市誤會的地方。人覺得舒服，和溫度、濕度、風速、輻射熱、衣著、活動量都有關。建築如果只靠把溫度打低來創造舒適，就是用能源掩蓋設計問題。」</p>
+<p>沈知行把這句話記下來。</p>
+<p>用能源掩蓋設計問題。</p>
+<p>他想到台灣許多辦公室與教室。夏天冷氣很強，有些人穿外套上課；外面走廊卻悶熱，冷氣室外機把熱氣排回城市。每個室內空間看似舒適，但整座城市像被無數台冷氣一起加熱。</p>
+<p>他問：</p>
+<p>「所以被動式設計是第一步？」</p>
+<p>「對。」Arjun 說，「遮陽、通風、採光、隔熱、座向，這些都比設備更早決定能源需求。很多能源浪費不是因為設備不夠好，而是建築一開始就設計成必須長期用設備補救。」</p>
+<p>林又晴拍攝中庭，低聲說：</p>
+<p>「房子如果會呼吸，人就不用一直替它插管。」</p>
+<p>Arjun 聽完翻譯，笑了。</p>
+<p>「這句比我的簡報好。」</p>
+<p>他們走到一間會議室。Noah 坐下後，四處找冷氣開關。</p>
+<p>「在哪裡？」</p>
+<p>Arjun 問：「你找什麼？」</p>
+<p>「冷氣開關。」</p>
+<p>「你不覺得舒服嗎？」</p>
+<p>Noah 愣了一下。</p>
+<p>他確實沒有覺得熱。</p>
+<p>會議室不是傳統意義上的冷，而是穩定。沒有過強的冷風吹在肩膀上，也沒有悶熱感。牆上的感測器正在監測室內溫濕度、二氧化碳濃度與人員使用狀況。空調系統依照使用人數與時段調整，而不是固定把整層樓打到同一個溫度。</p>
+<p>Arjun 指著牆面上的小型顯示器。</p>
+<p>「智慧能源管理不是讓建築變得炫，而是讓能源跟著需要走。」</p>
+<p>Noah 看著數字。</p>
+<p>「所以這棟建築知道我在裡面？」</p>
+<p>林又晴立刻接話：</p>
+<p>「也可能知道你一直在找冷氣開關。」</p>
+<p>Noah 有點緊張。</p>
+<p>「那它會不會知道我昨天半夜吃泡麵？」</p>
+<p>Arjun 笑了，但沈知行沒有立刻笑。</p>
+<p>這個玩笑背後其實有問題。智慧建築需要感測器，需要資料，需要分析人的活動模式。它可以節能，也可能引發隱私疑慮。建築如果知道人在哪裡、待多久、何時離開、使用哪些空間，那能源治理與個人資料邊界就會開始交疊。</p>
+<p>沈知行問：</p>
+<p>「智慧能源管理如何避免變成監控？」</p>
+<p>Arjun 收起笑容。</p>
+<p>「這是必須被認真討論的問題。資料最小化、匿名化、目的限制、權限管理，都很重要。建築需要知道某個區域是否有人，不一定需要知道是哪一個人。永續不應該以犧牲人的自主感為代價。」</p>
+<p>林又晴放下相機。</p>
+<p>「這句很重要。」</p>
+<p>下午，Arjun 帶他們到屋頂。新加坡的天色忽然變暗，雲層像一塊濕布從海邊推過來。不遠處高樓林立，立面上有綠植，有太陽能板，有空調機房，有雨水回收系統。城市看起來像一個巨大的能量裝置，一邊吸收熱，一邊排出熱，一邊用制度努力控制自己不要過熱。</p>
+<p>Arjun 指著遠方說：</p>
+<p>「在新加坡，綠建築不是單一建築的問題，而是城市尺度的問題。每一棟建築都影響城市熱島、電力需求、水資源與人的健康。」</p>
+<p>沈知行問：</p>
+<p>「你覺得最困難的是技術，還是人的觀念？」</p>
+<p>Arjun 想了想。</p>
+<p>「技術很難，但觀念更慢。很多人仍然相信舒適等於低溫，豪華等於明亮過度的大廳，效率等於全天候運轉。真正的轉型，是重新理解什麼叫好的生活品質。」</p>
+<p>雨突然落下來。</p>
+<p>不是小雨，而是熱帶城市典型的急雨，聲音密集地敲在屋頂遮棚上。遠方高樓變得模糊，綠植被雨水打亮。Noah 望著雨幕，忽然說：</p>
+<p>「這城市看起來不像在對抗自然，倒像在跟自然談判。」</p>
+<p>Arjun 點頭。</p>
+<p>「所有熱帶城市最後都會學到這件事。你不能假裝陽光、雨水、濕度不存在。你只能決定是用設計理解它們，還是用能源壓制它們。」</p>
+<p>那天晚上，沈知行在筆記本上寫下：</p>
+<p><strong>綠建築不是把房子變成機器，而是讓房子重新學會與氣候相處。</strong></p>
+</article>
+<article class="chapter" id="ch2"><div class="chapter-num">SECTION 02</div><h2><span class="city">東京</span>　小房子裡的巨大能源問題</h2>
+<p>從新加坡到東京，季節像被快速切換。</p>
+<p>東京三月的空氣仍帶著寒意。街道乾淨、秩序明確，人流卻密集得像一種安靜的浪。電車準時進站，便利商店燈光明亮，住宅區裡一棟棟小房子貼得很近，陽台上掛著衣物，狹窄道路旁停著小車與腳踏車。</p>
+<p>東京是一座龐大的城市，也是一座由無數小尺度生活拼起來的城市。它有摩天樓、企業總部、金融區與流行文化，也有細小巷弄、木造住宅、社區商店與老年人口。若說新加坡像一個高度集中管理的熱帶系統，東京則像一張精密到近乎無邊界的生活網。</p>
+<p>這一站，他們要看的是住宅。</p>
+<p>接待他們的是佐伯理央，一位東京建築師，專門研究住宅節能與既有住宅改造。她三十多歲，穿黑色長大衣，說話很快，但每一句都很清楚。</p>
+<p>她帶主角群走進一處安靜住宅區。路很窄，兩旁房子距離很近。林又晴拍攝屋簷、電線、信箱與門口的小盆栽，忽然說：</p>
+<p>「東京的住宅很像每個人努力在很小的地方整理出自己的世界。」</p>
+<p>佐伯理央點頭。</p>
+<p>「所以節能不能只談大型建築。真正困難的是這些小房子，還有住在裡面的人。」</p>
+<p>他們走進一棟翻修中的住宅。屋主是一對年輕夫妻，有一個剛出生不久的孩子。房子不大，但牆體已經加上新的隔熱層，窗戶更換為高性能窗，設備也準備換成高效率熱水與空調系統。</p>
+<p>Noah 看著牆壁施工剖面。</p>
+<p>「這看起來不像很華麗的改造。」</p>
+<p>佐伯理央說：</p>
+<p>「節能住宅很多時候本來就不華麗。好的隔熱、好的窗、好的氣密性，不一定會出現在 Instagram 上，但它會出現在每個月的電費、冬天的室內溫度、老人和孩子的健康裡。」</p>
+<p>沈知行問：</p>
+<p>「東京為什麼特別需要關注住宅能源？」</p>
+<p>佐伯理央回答：</p>
+<p>「因為住宅部門的排放不小，而且日本很多住宅過去隔熱性能不足。冬天室內冷、夏天又熱，住戶就必須依賴空調。能源效率不只是減碳，也關係到熱中暑、冬季健康與高齡者安全。」</p>
+<p>林又晴問：</p>
+<p>「所以綠建築不只是新的摩天大樓？」</p>
+<p>佐伯理央笑了。</p>
+<p>「當然不是。很多人說到綠建築，只想到漂亮的新建案。但城市真正的碳排，很多藏在既有建築裡。舊房子不可能一夜之間消失，所以改造比新建更難，也更重要。」</p>
+<p>她帶他們看窗戶。那是一扇高性能窗，隔音也比原本好。屋外有一輛貨車經過，室內聲音卻不刺耳。</p>
+<p>「能源效率有時候也會改善安靜。」佐伯理央說，「人住得舒服，就比較不需要用過度能源補償。」</p>
+<p>Noah 看著窗戶。</p>
+<p>「所以窗戶是建築的耳朵？」</p>
+<p>林又晴說：「你今天比喻還可以。」</p>
+<p>佐伯理央笑了。</p>
+<p>「也可以這樣說。窗戶讓房子聽見外面，也決定外面的熱、冷、聲音能不能闖進來。」</p>
+<p>下午，他們走訪一處展示「東京零排放住宅」概念的示範空間。裡面展示高隔熱材料、節能設備、太陽能與能源監測系統。展場的說明文字提到，住宅節能是東京都邁向 2050 年零排放目標的一部分。</p>
+<p>沈知行站在一組能源監測面板前。螢幕上顯示家庭用電、太陽能發電、儲能與耗能設備狀態。這種畫面他很熟悉，但放在家庭場景裡，感覺不同。</p>
+<p>企業看能源數據，是管理成本與風險。</p>
+<p>家庭看能源數據，則牽涉生活習慣、收入能力、設備選擇與居住權。</p>
+<p>林又晴忽然問：</p>
+<p>「如果節能住宅很好，但比較貴，那誰住得起？」</p>
+<p>佐伯理央沉默了一下。</p>
+<p>「這是最難的問題。住宅節能不能只靠市場。補助、法規、租屋制度、房東責任、資訊透明都很重要。否則節能會變成有錢人的舒適，能源貧窮的人繼續住在冬冷夏熱的房子裡。」</p>
+<p>沈知行把「能源貧窮」寫進筆記本。</p>
+<p>他想到很多城市裡的老舊公寓。夏天熱，冬天冷，電器老舊，用電效率差。收入較低的人可能買不起高效率設備，也無法進行隔熱改造，結果每個月付出更高比例的能源費用，卻住得更不舒服。</p>
+<p>永續若只鼓勵消費者購買新設備，可能會忽略那些最無力更新的人。</p>
+<p>晚餐時，他們在一間小居酒屋裡討論今天的採訪。店內空間狹小，牆上貼滿手寫菜單，烤魚香氣混著熱清酒的味道。外面很冷，店裡很暖。</p>
+<p>Noah 一邊吃烤飯糰，一邊說：</p>
+<p>「今天我學到一件事。」</p>
+<p>林又晴問：「什麼？」</p>
+<p>「房子不是大才有問題，小房子也有大問題。」</p>
+<p>沈知行說：</p>
+<p>「小房子有時候更能看出制度問題。因為它關係到一般人的生活。」</p>
+<p>林又晴看著窗外狹窄街道。</p>
+<p>「新加坡那章像城市級的能源管理，東京這章比較像家庭級的能源管理。」</p>
+<p>「對。」沈知行說，「一個問城市如何降溫，一個問家如何保溫。」</p>
+<p>Noah 補一句：</p>
+<p>「還有我如何不被冷死或熱死。」</p>
+<p>林又晴笑了。</p>
+<p>沈知行也笑了，但他知道 Noah 的玩笑不是全無道理。氣候變遷讓極端高溫與寒冷風險更頻繁，住宅品質將越來越直接關係人的健康。未來的房子不只是遮風避雨的殼，也是一種氣候適應設備。</p>
+<p>他在筆記本上寫下：</p>
+<p><strong>住宅能源效率不是技術細節，而是氣候時代最基本的生活保障。</strong></p>
+</article>
+<article class="chapter" id="ch3"><div class="chapter-num">SECTION 03</div><h2><span class="city">弗萊堡</span>　陽光住進社區</h2>
+<p>德國弗萊堡的光，和新加坡、東京都不同。</p>
+<p>它比較乾淨，也比較慢。火車進站時，遠方可以看見黑森林邊緣的山影。這座位於德國西南部的大學城，長期被視為環境運動、太陽能產業與生態城市規劃的重要代表。街道上電車緩緩經過，老城中心仍保留中世紀街道尺度，小水渠沿著街邊流動，像城市替自己保留的細小記憶。</p>
+<p>Noah 一下車，就說：</p>
+<p>「這裡看起來很適合退休。」</p>
+<p>林又晴說：</p>
+<p>「你不是還沒工作穩定，就先想退休？」</p>
+<p>「永續規劃要有長期視角。」Noah 回答。</p>
+<p>他們今天要去 Vauban。</p>
+<p>Vauban 曾是法國軍營，後來轉型為生態住宅區。它在永續城市案例裡很有名：低能耗住宅、太陽能、綠地、步行與自行車友善、限制汽車使用、社區參與。可是沈知行提醒自己，不能把它拍成完美烏托邦。</p>
+<p>每個成功案例背後，都有歷史條件、制度選擇與社會代價。</p>
+<p>在 Vauban 入口等他們的是 Hannah，一位社區能源合作社成員，也是當地居民。她五十多歲，灰白頭髮，穿著厚毛衣，手上牽著一台舊自行車。她不是專業導覽員，卻比任何官方簡報都熟悉這裡。</p>
+<p>她帶他們走進社區。街道很安靜，孩子在空地上玩耍，住宅立面有木材、陽台、綠植與太陽能板。許多車停在社區邊緣的集中停車設施，內部街道主要留給步行、自行車與孩子。</p>
+<p>林又晴拍下孩子在路邊畫粉筆的畫面。</p>
+<p>「這裡很像城市把聲音調小了。」</p>
+<p>Hannah 聽完翻譯，點頭。</p>
+<p>「因為車少，人的聲音才會回來。」</p>
+<p>Noah 問：</p>
+<p>「住在這裡的人都很環保嗎？」</p>
+<p>Hannah 笑了。</p>
+<p>「有些是，有些不是。有些人只是喜歡安靜、安全、便宜一點的能源帳單，還有孩子可以在外面玩。」</p>
+<p>這句話聽起來很熟悉。荷蘭和丹麥的交通規劃者也說過類似的話：永續成功，不一定因為每個人都被環保理念感召，而是因為制度讓比較好的生活方式變得合理。</p>
+<p>Hannah 帶他們看一棟能源效率很高的住宅。建築座向利用陽光，牆體隔熱好，窗戶設計讓冬天可以獲得日照，夏天則透過遮陽減少過熱。屋頂上的太陽能板在三月陽光下安靜發電。</p>
+<p>「我們常說太陽能，」Hannah 說，「但真正重要的是先少浪費能源。太陽能板很漂亮，但如果房子本身漏熱，它就像一邊存錢一邊把錢包剪破。」</p>
+<p>Noah 立刻點頭。</p>
+<p>「這句我懂。我的錢包就是這樣。」</p>
+<p>林又晴說：「那是你自己亂買東西，不是能源效率問題。」</p>
+<p>他們走到一處公共綠地。Hannah 說，社區早期規劃過程中，居民參與非常重要。很多空間不是由開發商單方面決定，而是透過討論、協商與共同設計形成。</p>
+<p>沈知行問：</p>
+<p>「社區參與會不會很慢？」</p>
+<p>「當然慢。」Hannah 說，「民主通常都慢。但如果你希望居民長期照顧這個地方，一開始就要讓他們成為設計的一部分。」</p>
+<p>林又晴問：</p>
+<p>「有沒有缺點？」</p>
+<p>Hannah 笑了一下。</p>
+<p>「當然有。不是每個人都喜歡開會，不是每個人都有時間參與。這樣的社區也可能被中產階級化，被外界浪漫化。永續社區如果變成只有特定收入和教育背景的人住得起，也會失去一部分意義。」</p>
+<p>沈知行很喜歡她的誠實。</p>
+<p>很多案例介紹只保留成功的一面：減碳、節能、社區、孩子、綠地。可是實際現場更複雜。誰能住進來？誰參與得起？誰的聲音被聽見？誰的生活被代表？這些問題不問，永續就容易變成漂亮的空間美學。</p>
+<p>下午，他們在社區咖啡館休息。咖啡館裡坐著學生、年輕父母、老人與幾位騎自行車來的居民。窗外陽光斜斜照進來，落在木桌上。</p>
+<p>Noah 看著窗外，忽然說：</p>
+<p>「這裡讓我覺得，房子不只是房子。」</p>
+<p>沈知行問：「那是什麼？」</p>
+<p>Noah 想了想。</p>
+<p>「是一種生活協議。」</p>
+<p>Hannah 聽完後點頭。</p>
+<p>「對。你住在哪裡，不只是選一個室內空間，也是在選擇你和能源、交通、鄰居、孩子、土地之間的關係。」</p>
+<p>林又晴把這句話記下來。</p>
+<p>傍晚，他們沿著街道慢慢走回電車站。社區裡的燈一盞盞亮起，太陽能板失去白天的光澤，窗戶裡透出溫暖的黃光。孩子被叫回家吃晚餐，腳踏車靠在門邊，風從樹枝間穿過。</p>
+<p>弗萊堡沒有新加坡那種精密管理的熱帶城市感，也沒有東京那種高密度生活的細緻壓力。它給沈知行的感覺更像是一個問題被放慢後的答案：房子、能源、交通與社區，其實不能分開設計。</p>
+<p>他在筆記本上寫下：</p>
+<p><strong>真正會呼吸的房子，不只調節溫度，也調節人與城市、人與能源、人與彼此之間的距離。</strong></p>
+</article>
+<article class="chapter" id="ch4"><div class="chapter-num">SECTION 04</div><h2><span class="city">本月結語</span>　舒適不是浪費的藉口</h2>
+<p>第三個月結束時，沈知行發現自己開始注意每一個室內空間。</p>
+<p>旅館房間的冷氣是否太強，會議室的燈是否過亮，窗戶能不能打開，走廊有沒有自然採光，屋頂是否只是屋頂，還是可以收集雨水、發電、降溫。這些過去容易被忽略的細節，突然變成一座城市最誠實的語言。</p>
+<p>新加坡教他看見熱帶城市如何用制度、設計與智慧管理回應高溫與高密度。東京讓他明白，住宅能源效率不只是豪宅與新建案的標準，而是每一個家庭面對氣候風險的基礎防線。弗萊堡則提醒他，建築永續不能只看單棟性能，還要看社區、交通、能源與居民參與是否能連成一個生活系統。</p>
+<p>林又晴整理影片時，問他：</p>
+<p>「這個月我們到底在拍什麼？綠建築？節能住宅？太陽能社區？」</p>
+<p>沈知行想了一下。</p>
+<p>「我們在拍舒適的代價。」</p>
+<p>Noah 抬頭。</p>
+<p>「這聽起來像恐怖片。」</p>
+<p>「不是恐怖片。」沈知行說，「只是我們以前太習慣把舒適建立在看不見的能源消耗上。冷氣、照明、熱水、電梯、除濕、暖氣，所有東西都讓生活更舒服，可是我們很少問：有沒有更聰明的方式？」</p>
+<p>林又晴看著新加坡中庭的畫面。</p>
+<p>「也就是說，永續不是要人忍耐，而是讓舒適不要那麼浪費。」</p>
+<p>「對。」沈知行說，「好的設計不是取消生活品質，而是重新定義生活品質。」</p>
+<p>Noah 說：</p>
+<p>「那我可以重新定義一下：房間不要太熱，也不要冷到像鮭魚冷藏庫。」</p>
+<p>林又晴點頭。</p>
+<p>「這很人本。」</p>
+<p>三人笑了起來。</p>
+<p>晚上，沈知行在筆記本寫下第三個月最後一句：</p>
+<p><strong>房子是人類對氣候說出的第一句話。它可以是對抗，也可以是理解；可以是浪費，也可以是共生。</strong></p>
+<p>窗外的弗萊堡很安靜。</p>
+<p>他突然想到台灣。潮濕、炎熱、颱風、地震、老舊公寓、鐵皮加蓋、冷氣室外機、頂樓水塔、騎樓、公寓樓梯間、校園教室、辦公大樓。台灣其實比很多地方更需要會呼吸的房子。不是只有節能，而是因為人在越來越熱的世界裡，需要能保護生活的空間。</p>
+<p>第四個月，他們要去柏林與斯德哥爾摩，討論垃圾、修復與循環。</p>
+<p>Noah 聽到「修復」兩個字時，看向自己的行李箱。</p>
+<p>它的輪子在弗萊堡車站壞了一邊。</p>
+<p>林又晴說：</p>
+<p>「很好，第四個月的開場道具自己出現了。」</p>
+<p>Noah 嘆氣。</p>
+<p>「我覺得我的行李箱比我更早進入循環經濟。」</p>
+<p>沈知行看著那只歪斜的行李箱，笑了。</p>
+<p>旅程確實正在用自己的方式，替他們安排下一章。</p>
+</article>
+<section class="notes-section" id="notes"><div class="notes-inner"><div class="notes-title">本月真實永續案例筆記與資料來源</div>
+
+</div></section>
+</main>
+<footer>
+  <a href="index.html">永續環遊世界365天　韓千山　著</a>
+</footer>
+</body>
+</html>

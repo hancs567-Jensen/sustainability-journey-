@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第七個月　能源不是插頭後面的事｜永續環遊世界365天</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:#8a6f2e;
+  --dark:#0d0c0a;--dark2:#141210;--dark3:#1c1a16;--dark4:#242118;
+  --text:#d4cbbf;--text-dim:#7a7060;--line:rgba(201,168,76,0.18);
+}
+body{background:var(--dark);color:var(--text);font-family:'Noto Serif TC',serif;font-weight:300;line-height:2;font-size:17px;overflow-x:hidden}
+nav{background:var(--dark2);border-bottom:1px solid var(--line);padding:0;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-home{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+.nav-home:hover{color:var(--gold)}
+.nav-toc{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.nav-toc::-webkit-scrollbar{display:none}
+.nav-toc a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:1px;color:var(--text-dim);text-decoration:none;padding:0 14px;white-space:nowrap;line-height:52px;border-bottom:2px solid transparent;transition:all .2s}
+.nav-toc a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.chapter-hero{background:linear-gradient(180deg,var(--dark2) 0%,var(--dark) 100%);border-bottom:1px solid var(--line);padding:80px 40px 64px;text-align:center;position:relative;overflow:hidden}
+.chapter-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-month{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:5px;color:var(--gold);margin-bottom:20px}
+.hero-title{font-size:clamp(24px,4vw,40px);font-weight:700;letter-spacing:3px;line-height:1.4;background:linear-gradient(135deg,#e8c97a,#c9a84c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.hero-cities{font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:4px;color:var(--text-dim)}
+main{max-width:700px;margin:0 auto;padding:72px 32px 100px}
+.chapter{margin-bottom:80px;opacity:0;animation:fadeUp .6s ease forwards}
+.chapter:nth-child(1){animation-delay:.1s}.chapter:nth-child(2){animation-delay:.2s}.chapter:nth-child(3){animation-delay:.3s}.chapter:nth-child(4){animation-delay:.4s}.chapter:nth-child(5){animation-delay:.5s}.chapter:nth-child(6){animation-delay:.6s}
+.chapter-num{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:12px}
+.chapter h2{font-size:clamp(18px,3vw,24px);font-weight:500;line-height:1.5;letter-spacing:1px;color:var(--gold-light);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.chapter h2 .city{font-weight:700;margin-right:4px}
+.chapter p{margin-bottom:1.6em;color:rgba(212,203,191,0.85)}
+.chapter strong{color:var(--text);font-weight:500}
+.notebook{background:rgba(201,168,76,0.06);border-left:2px solid var(--gold);padding:20px 24px;margin:36px 0;font-size:15px;color:var(--gold-light);line-height:2;font-style:italic;position:relative}
+.notebook::before{content:'筆記';display:block;font-family:'Noto Sans TC',sans-serif;font-style:normal;font-size:9px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:8px}
+.signage-wrap{text-align:center;margin:28px 0}
+.signage{display:inline-block;border:1px solid var(--gold-dim);padding:14px 32px;font-size:16px;font-weight:500;letter-spacing:3px;color:var(--gold-light)}
+.notes-section{background:var(--dark2);border-top:1px solid var(--line);padding:64px 32px 80px}
+.notes-inner{max-width:700px;margin:0 auto}
+.notes-title{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:40px}
+.note-card{border-top:1px solid var(--line);padding:28px 0}
+.note-card h3{font-size:15px;font-weight:500;color:var(--gold-light);margin-bottom:16px}
+.note-row{display:flex;gap:16px;font-size:13px;line-height:1.9;margin-bottom:6px}
+.note-label{font-family:'Noto Sans TC',sans-serif;color:var(--gold-dim);white-space:nowrap;min-width:80px}
+.note-val{color:rgba(212,203,191,0.7)}
+footer{background:var(--dark);border-top:1px solid var(--line);padding:40px;text-align:center}
+footer a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){main{padding:48px 20px 80px}.chapter-hero{padding:60px 24px 48px}.notes-section{padding:48px 20px 60px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-home" href="index.html">← 返回目錄</a>
+    <div class="nav-toc">
+      <a href="#ch1">§1</a><a href="#ch2">§2</a><a href="#ch3">§3</a>
+      <a href="#ch4">§4</a><a href="#ch5">§5</a><a href="#notes">案例</a>
+    </div>
+  </div>
+</nav>
+<div class="chapter-hero">
+  <div class="hero-month">MONTH 07</div>
+  <div class="hero-title">能源不是插頭後面的事</div>
+  <div class="hero-cities">丹麥　·　台灣　·　離岸風電</div>
+</div>
+<main>
+<article class="chapter" id="ch1"><div class="chapter-num">SECTION 01</div><h2><span class="city">薩姆索島</span>　風不是免費的</h2>
+<p>船往薩姆索島開去時，海面是灰藍色的。</p>
+<p>風從船舷旁掠過，帶著鹹味，也帶著一種不肯停下來的力量。遠處島影逐漸清楚，低矮的房屋、田地、港口、樹林與風機慢慢浮出海平線。丹麥的海不像熱帶海島那樣明亮，它冷靜、節制，卻很有存在感。</p>
+<p>Noah 抓著欄杆，臉色不太好。</p>
+<p>林又晴舉起相機。</p>
+<p>「你暈船？」</p>
+<p>Noah 勉強維持尊嚴。</p>
+<p>「我是在用身體感受能源轉型的波動性。」</p>
+<p>沈知行看著遠方的風機，笑了笑。</p>
+<p>薩姆索島是全球永續能源故事裡經常被提到的名字。1997 年，這座丹麥小島開始推動再生能源轉型，後來以風力、太陽能、生質能與地方參與，成為「再生能源島」的代表。許多文章喜歡寫它如何用十年左右時間達成能源自給，如何成為碳負排或能源輸出地，如何吸引世界各地的人來參訪。</p>
+<p>可是沈知行知道，故事如果只寫到「小島成功轉型」，就太容易了。</p>
+<p>真正值得問的是：誰參與？誰投資？誰受益？誰反對？誰承擔風險？能源轉型如果只是把化石燃料換成風機，卻仍然讓少數人控制利益、多數人承擔影響，那它不會真正成為地方的未來。</p>
+<p>他們抵達港口時，接待他們的人已經在等。</p>
+<p>Erik，薩姆索能源學院的地方合作顧問，五十多歲，臉被海風吹得有些紅。他穿著厚外套，笑起來很爽朗。第一眼看起來像漁夫，第二眼才會感覺到他對能源數據、社區協商與地方政治都很熟。</p>
+<p>他開著一台電動車，把三人載往島上的能源學院。</p>
+<p>Noah 坐上車後，立刻說：</p>
+<p>「我支持陸上能源交通。」</p>
+<p>Erik 聽完翻譯，大笑。</p>
+<p>車窗外，田地平展，風機緩慢轉動。那些白色葉片看起來安靜，實際上卻在把風轉成電，把地方轉成一種新型能源敘事。</p>
+<p>林又晴看著窗外問：</p>
+<p>「島上的人一開始都支持嗎？」</p>
+<p>Erik 沒有立刻回答。</p>
+<p>「不。沒有人喜歡突然有人告訴你，你熟悉的風景要改變，而且改變的理由是為了拯救地球。」</p>
+<p>沈知行說：</p>
+<p>「所以怎麼說服？」</p>
+<p>Erik 轉動方向盤，車子駛過一片田。</p>
+<p>「不是說服，是參與。這兩個字差很多。外面的人常以為能源轉型靠技術，或者靠更好的簡報。但地方真正要問的是：這件事和我有什麼關係？我能不能投資？能不能分享收益？會不會影響我的土地、海、景觀、生活？如果答案只是『為了地球，請你忍耐』，那不公平。」</p>
+<p>能源學院是一棟不大的建築，裡面有展示空間、會議室與教育活動。牆上有薩姆索能源轉型的時間線、風機模型、地方投資資料、學校課程照片與來訪者留言。</p>
+<p>Erik 指著地圖說：</p>
+<p>「薩姆索的故事不是風力發電的故事，而是地方如何重新擁有能源的故事。」</p>
+<p>林又晴問：</p>
+<p>「擁有能源？」</p>
+<p>「對。」Erik 說，「如果能源設施只是由外部公司建設、外部資本擁有、外部市場獲利，而地方只留下視覺衝擊和施工干擾，那居民為什麼要支持？在這裡，地方參與、合作社、農民投資、市民持股，這些都很重要。」</p>
+<p>Noah 盯著風機模型。</p>
+<p>「所以不是風免費，而是風被誰組織起來很重要。」</p>
+<p>Erik 點頭。</p>
+<p>「風一直在。但能源系統不是自然現象，它是制度。」</p>
+<p>這句話讓沈知行立刻記下來。</p>
+<p>下午，Erik 帶他們拜訪一位農民 Jens。他的家旁邊遠處可以看見風機。Jens 曾經投資地方風機，也參與過社區討論。他的手很粗，講話慢，眼神裡有務實的警覺。</p>
+<p>Jens 帶他們走到田邊。</p>
+<p>「一開始我也懷疑。」他說，「風機會不會吵？會不會影響土地？會不會只是城市人和工程公司賺錢？」</p>
+<p>沈知行問：</p>
+<p>「後來為什麼參與？」</p>
+<p>Jens 指著遠方風機。</p>
+<p>「因為我們不只是被告知，而是被邀請。有人來解釋，有會議，有財務模型，有鄰居討論，也有投資機會。你不一定同意每件事，但你知道自己不是被放在決定之外。」</p>
+<p>林又晴問：</p>
+<p>「你現在覺得它改變了島嗎？」</p>
+<p>Jens 笑了一下。</p>
+<p>「當然。有人覺得好，有人還是不喜歡。風機不是神，它也有問題。但它讓我們開始談能源、談錢、談未來。以前能源只是帳單，現在它變成地方會議裡的事情。」</p>
+<p>以前能源只是帳單。</p>
+<p>現在它變成地方會議裡的事情。</p>
+<p>沈知行覺得這可能就是能源民主最簡單的定義。</p>
+<p>傍晚，Erik 帶三人到海邊。遠處的離岸風機排列在海上，葉片慢慢轉動。夕陽把雲染成淡橘色，海風很強，吹得林又晴幾乎站不穩。</p>
+<p>Noah 把帽子壓住。</p>
+<p>「我現在理解為什麼這裡適合風電。」</p>
+<p>林又晴說：</p>
+<p>「因為你快被吹走？」</p>
+<p>「因為我感覺自己也是可再生資源。」Noah 說。</p>
+<p>沈知行看著海上的風機，沒有說話。</p>
+<p>他過去在很多報告裡看過再生能源裝置容量、發電量、減碳量、投資報酬率、躉購費率、電力市場改革。那些都重要，但站在海邊時，他突然覺得能源還有另一種尺度：地方的人是否相信這個改變，是否覺得自己在其中有位置。</p>
+<p>Erik 站在旁邊說：</p>
+<p>「世界各地的人來薩姆索，都問我們技術怎麼做。其實技術不是最難。最難的是讓人相信，轉型不是別人帶來的命令，而是我們可以一起擁有的未來。」</p>
+<p>沈知行在筆記本寫下：</p>
+<p><strong>能源轉型不是把風變成電而已，而是把遠方的能源系統，重新變成地方可以理解、參與</strong><strong>與</strong><strong>負責的事情。</strong></p>
+</article>
+<article class="chapter" id="ch2"><div class="chapter-num">SECTION 02</div><h2><span class="city">漢堡</span>　港口的熱，不能只排進天空</h2>
+<p>德國漢堡的能源問題有另一種重量。</p>
+<p>這座城市位於易北河畔，是德國重要港口與工業城市。貨櫃、船舶、倉庫、橋梁、軌道、風力產業、物流、老港區更新與現代商業區交錯在一起。漢堡不是田園式的能源轉型，它的挑戰更像工業時代留下的一道複雜題：港口如何減碳？工業如何供熱？城市如何在成長與低碳之間重設基礎設施？</p>
+<p>Noah 一進漢堡港就說：</p>
+<p>「這裡不像能源轉型，像巨大的機械動物。」</p>
+<p>林又晴拍著吊車、貨櫃與水面。</p>
+<p>「機械動物也要減碳。」</p>
+<p>接待他們的是 Anke，一位城市能源規劃師，曾參與漢堡區域供熱、港區再開發與工業廢熱利用專案。她穿著深綠色外套，頭髮綁得很整齊。她說話沒有太多修飾，像習慣把熱源、管線、用戶、投資與排放量放在同一張圖上看。</p>
+<p>她先帶他們到 HafenCity。</p>
+<p>HafenCity 是漢堡老港區再開發的重要區域，倉庫、住宅、辦公室、文化設施與公共空間在這裡重新組合。這裡的建築新而整齊，水邊步道寬敞，遠處可以看見易北愛樂廳。觀光客喜歡拍它的建築曲線，但 Anke 要他們看的不是外觀。</p>
+<p>她指著地下。</p>
+<p>「真正重要的東西，常常看不見。」</p>
+<p>Noah 低頭。</p>
+<p>「地下有秘密？」</p>
+<p>「管線。」Anke 說。</p>
+<p>林又晴笑了。</p>
+<p>Anke 帶他們看區域供熱系統示意圖。她說，在寒冷地區，供熱是城市能源轉型的重要部分。很多人想到能源，只想到電力；但建築供暖、熱水、工業用熱也需要大量能源。如果每棟建築都自己燒燃料或單獨用效率不佳的設備，整體排放與成本都會增加。區域供熱的概念，是用集中或網絡化方式，把熱源送到不同建築，並逐步納入再生能源、工業廢熱、熱泵、太陽熱能等來源。</p>
+<p>沈知行問：</p>
+<p>「所以熱也是可以被規劃的？」</p>
+<p>Anke 看著他。</p>
+<p>「熱如果不被規劃，就會被浪費。」</p>
+<p>她帶他們到一處正在發展低碳熱供應的區域。這裡有舊港口設施，也有新建住宅與辦公空間。Anke 說，漢堡正在推動利用工業廢熱、污水熱、河水或海水熱泵等方式，降低供熱系統對化石燃料的依賴。她也提到，港口與工業區減碳很難，因為它牽涉企業投資、能源價格、管線建設、政策補貼與長期合約。</p>
+<p>Noah 問：</p>
+<p>「廢熱是什麼？聽起來像被丟掉的熱。」</p>
+<p>Anke 點頭。</p>
+<p>「差不多。工業過程會產生熱，如果不回收，可能就排到空氣或水中。對一家工廠來說，它可能是副產品；對城市來說，它可能是資源。」</p>
+<p>林又晴說：</p>
+<p>「所以這個月又回到第四個月的概念：垃圾其實沒有消失。」</p>
+<p>沈知行接著說：</p>
+<p>「只是這次垃圾是熱。」</p>
+<p>Anke 笑了。</p>
+<p>「很好。熱也是一種錯置的資源。」</p>
+<p>他們站在港邊，看著遠方的煙囪與風機組件。漢堡不只是一座消費城市，也是一座生產與物流城市。能源轉型在這裡沒有薩姆索島那麼容易被講成社區故事，卻更貼近世界大多數工業城市的困境。</p>
+<p>Anke 說：</p>
+<p>「德國能源轉型常被外界用風電、太陽能、核電退場來理解。但下一階段更困難：工業、建築、交通、熱、氫能、電網、儲能，全部要一起改。」</p>
+<p>沈知行問：</p>
+<p>「最大的阻力是什麼？」</p>
+<p>Anke 想了一下。</p>
+<p>「不是只有一個阻力。成本、時間、居民接受度、企業競爭力、許可程序、技術風險、政治變動。還有一件事很難。」</p>
+<p>「什麼？」</p>
+<p>「人們喜歡能源轉型的願景，但不喜歡能源轉型的施工。」</p>
+<p>這句話讓三人都笑了，卻也很真實。</p>
+<p>施工會封路，管線要挖開，建築要改造，工廠要停機調整，居民要忍受不便，費用可能上升。能源轉型不是簡報上的箭頭，而是一連串具體又麻煩的工程。</p>
+<p>中午，他們在 HafenCity 一間餐廳用餐。窗外是水岸與行人，遠方有吊車。Noah 一邊喝湯，一邊問：</p>
+<p>「所以漢堡和薩姆索島最大的不同是什麼？」</p>
+<p>沈知行想了一下。</p>
+<p>「薩姆索讓我們看到能源轉型如何從社區信任開始。漢堡讓我們看到能源轉型如何進入大型城市與工業基礎設施。」</p>
+<p>林又晴補充：</p>
+<p>「一個是誰擁有風，一個是誰利用熱。」</p>
+<p>Anke 點頭。</p>
+<p>「還有一個共同點。」</p>
+<p>「什麼？」</p>
+<p>「都需要讓看不見的東西被看見。風本來只是風，熱本來只是熱，管線本來只是地下設施，電力本來只是帳單。能源轉型就是讓這些看不見的關係重新變成公共討論。」</p>
+<p>下午，他們參觀一處能源展示中心。展板上有德國 Energiewende 的歷史：從反核運動、再生能源法、風電與太陽能擴張，到近年的電網、儲能、氫能、工業減碳與建築供熱挑戰。沈知行看著那些資料，心裡浮現一個更大的問題。</p>
+<p>能源轉型不可能永遠保持浪漫。</p>
+<p>當再生能源比例提高，問題會從「要不要轉型」變成「如何承擔轉型成本」「如何維持供電穩定」「如何協調地方衝突」「如何避免低收入家庭能源負擔過重」「如何讓產業不外移」「如何讓老舊建築也能改造」。</p>
+<p>這些問題不美，但必須回答。</p>
+<p>傍晚，Anke 帶他們到港口邊。風很大，水面有波紋。遠方一艘貨船緩慢移動，像一座漂浮的工廠。</p>
+<p>Noah 看著港口。</p>
+<p>「我以前以為能源就是插座後面的東西。」</p>
+<p>Anke 說：</p>
+<p>「大多數人都是。直到插座後面的系統出問題。」</p>
+<p>沈知行在筆記本寫下：</p>
+<p><strong>能源轉型真正困難的地方，不是發明新技術，而是把城市、工業、居民、資本與時間重新接線。</strong></p>
+<p>彰化海邊：<strong></strong>風機下的<strong></strong>漁民</p>
+<p>回到台灣時，風又變了。</p>
+<p>彰化海邊的風帶著鹽、泥沙與漁港的味道。岸邊有消波塊、漁船、魚網、廟宇、蚵棚、潮間帶與遠方若隱若現的風機。台灣海峽風況良好，離岸風電被視為台灣能源轉型的重要支柱。但站在海邊，沈知行知道，任何在政策文件裡看似乾淨的裝置容量，都會在地方生活裡變成具體問題。</p>
+<p>風機不是插在空白海面上。</p>
+<p>它插在漁場、航道、信仰、記憶、產業、補償、工程船、海象、地方政治與能源安全之間。</p>
+<p>接待他們的是兩個人。</p>
+<p>一位是周品瑜，離岸風電開發公司的地方溝通企劃。她三十多歲，曾在環境顧問公司工作，後來轉到能源公司。她說話謹慎，像每一句都知道可能被不同立場的人聽見。</p>
+<p>另一位是阿坤，六十歲左右的漁民，皮膚被海風吹得黝黑，手上有老繭。他沒有特別想成為任何人的採訪對象，但在地方朋友介紹下，願意帶他們看看漁港。</p>
+<p>阿坤第一句話就說：</p>
+<p>「我不是反對風電。」</p>
+<p>他停了一下。</p>
+<p>「我只是想知道，海變了以後，我的孩子還能不能靠海生活。」</p>
+<p>這句話讓原本準備提問的林又晴放下相機幾秒。</p>
+<p>周品瑜站在旁邊，沒有插話。</p>
+<p>阿坤帶他們走到碼頭邊。漁船停在水面上，繩索摩擦發出聲音。他指著遠方。</p>
+<p>「以前我們去那邊。現在有些地方不能去，有些地方施工，有些地方要繞。你說補償，我知道有補償。但海不是只有錢。」</p>
+<p>沈知行問：</p>
+<p>「那海還是什麼？」</p>
+<p>阿坤看著他，像這問題太城市。</p>
+<p>「海是路，是工作，是祖先留下來的經驗，是你知道哪個季節去哪裡，是你看風、看潮、看魚。你不能只在地圖上畫一塊，說這裡以後發電。」</p>
+<p>周品瑜這時才說話。</p>
+<p>「這也是我們現在必須學的。早期很多溝通確實不夠，覺得法規程序跑完、補償機制設計好就可以。但地方在意的不只是金額，也是在意自己有沒有被真正理解。」</p>
+<p>Noah 小聲對林又晴說：</p>
+<p>「這裡的風比薩姆索島重很多。」</p>
+<p>林又晴點頭。</p>
+<p>同樣是風，薩姆索島的風被講成社區擁有；漢堡的熱被講成城市基礎設施；台灣海邊的風，卻必須先穿過漁民的不安。</p>
+<p>上午，周品瑜帶他們到一處地方說明會場地。牆上有離岸風場位置圖、施工期程、環境監測資料、漁業補償方案與地方回饋計畫。她說，台灣離岸風電需要面對的不只是工程挑戰，還有供應鏈、金融、國產化政策、電力併網、海洋生態、漁業共存與社會接受度。</p>
+<p>沈知行問：</p>
+<p>「你覺得最難的是什麼？」</p>
+<p>周品瑜看著風場位置圖。</p>
+<p>「最難的是信任。工程可以算，風可以測，電價可以談，融資可以設計。但信任如果一開始沒有建立，後面每一件事都會變得更貴、更慢、更痛苦。」</p>
+<p>林又晴問：</p>
+<p>「那怎麼建立？」</p>
+<p>周品瑜苦笑。</p>
+<p>「沒有捷徑。早點來，常常來，聽得懂地方語言，不要只在要開工前才出現。還有，不要把地方居民只當成需要被說服的人。」</p>
+<p>這句話和薩姆索島 Erik 說的幾乎相同。</p>
+<p>不是說服，是參與。</p>
+<p>下午，他們跟著阿坤上船出海一小段。海面不算平，Noah 坐得很安靜，臉色再次開始進入「能源轉型波動性」狀態。</p>
+<p>林又晴拍遠方風機。白色塔身立在海上，葉片緩慢轉動。從鏡頭裡看，它們很美。乾淨、巨大、未來感十足。可是一轉頭，看見阿坤的臉，那種美立刻變得複雜。</p>
+<p>沈知行問阿坤：</p>
+<p>「如果溝通做得更好，你會支持嗎？」</p>
+<p>阿坤沒有立刻回答。</p>
+<p>「我支持孩子以後不要沒電用，也支持空氣乾淨一點。可是我不支持有人坐在辦公室裡，把我們的海當成空地。」</p>
+<p>船身輕輕晃動。</p>
+<p>阿坤繼續說：</p>
+<p>「你要做，可以。你要先來海邊坐，聽老人說海，聽年輕人說他們還想不想捕魚，聽廟裡的人說這片海對他們是什麼。你聽完，再說你要怎麼做。」</p>
+<p>沈知行忽然覺得，阿坤其實講的是一種海上的民主。</p>
+<p>不一定反對轉型，但拒絕被轉型。</p>
+<p>傍晚回到岸上時，天色變橘。廟口有人燒香，港邊有人整理漁網，遠方風機仍然轉著。周品瑜和阿坤站在一起，兩人沒有激烈爭辯，也沒有假裝問題已解決。</p>
+<p>這樣的沉默，反而比很多公關影片真實。</p>
+<p>林又晴問周品瑜：</p>
+<p>「妳會不會覺得很挫折？」</p>
+<p>周品瑜點頭。</p>
+<p>「會。但如果能源轉型只挑容易的地方做，就不叫轉型。台灣沒有很多選擇。我們需要綠電，也需要產業，也需要漁民，也需要海洋生態。難的是，這些需求常常同時存在。」</p>
+<p>Noah 終於恢復一點精神，低聲說：</p>
+<p>「所以永續不是做對一件事，是讓很多對的事不要互相傷害。」</p>
+<p>沈知行看著他。</p>
+<p>「這句很好。」</p>
+<p>Noah 虛弱地點頭。</p>
+<p>「我暈船時比較有哲學感。」</p>
+<p>沈知行在筆記本寫下：</p>
+<p><strong>公平轉型不是讓所有人都</strong><strong>滿意，而是</strong><strong>讓承擔代價的人，不被排除在決定之外。</strong></p>
+</article>
+<article class="chapter" id="ch3"><div class="chapter-num">SECTION 03</div><h2><span class="city">本月結語</span>　插頭後面的世界</h2>
+<p>第七個月結束時，沈知行發現自己回到旅館後，會盯著插座看。</p>
+<p>插座看起來很單純。</p>
+<p>一個白色面板，兩個孔，電腦接上去，手機充起來，燈亮，冷氣運轉，熱水器加熱。現代生活把能源藏得太好，藏到人們以為電只是來自牆壁，熱只是來自管線，汽油只是來自加油站，風只是海邊風景的一部分。</p>
+<p>可是這個月，他們走進插頭後面的世界。</p>
+<p>在薩姆索島，他們看見風如何因為地方參與、合作社與信任，從自然現象變成共同資產。在漢堡，他們看見熱如何被城市重新規劃，工業廢熱、區域供熱、港口更新與能源基礎設施如何交織。在彰化海邊，他們看見風電不只是國家能源政策與企業投資，也是一位漁民對海的記憶與不安。</p>
+<p>能源不是技術而已。</p>
+<p>能源是權力。</p>
+<p>是誰決定發電方式。</p>
+<p>是誰付出土地與景觀。</p>
+<p>是誰承擔施工與風險。</p>
+<p>是誰取得收益。</p>
+<p>是誰在電價上感到壓力。</p>
+<p>是誰的生活被稱為「轉型成本」。</p>
+<p>林又晴剪影片時，把三個畫面放在一起。</p>
+<p>第一個畫面，薩姆索島的風機在夕陽下轉動，Erik 說：「不是說服，是參與。」</p>
+<p>第二個畫面，漢堡港邊的管線示意圖，Anke 說：「熱如果不被規劃，就會被浪費。」</p>
+<p>第三個畫面，彰化海邊的阿坤看著遠方風機，說：「海不是只有錢。」</p>
+<p>三句話連在一起，比任何能源政策摘要都清楚。</p>
+<p>Noah 看完影片，沉默了一會兒。</p>
+<p>「我以前覺得綠電就是比較乾淨的電。現在覺得，它也可能很複雜。」</p>
+<p>沈知行說：</p>
+<p>「複雜不代表不要做。」</p>
+<p>「我知道。」Noah 說，「只是不能把複雜的人刪掉。」</p>
+<p>這一次，林又晴沒有吐槽他。</p>
+<p>沈知行打開筆記本，寫下第七個月最後一句：</p>
+<div class="notebook">真正的能源轉型，不是讓電看起來更綠，而是讓能源背後的關係更公平、更透明，也更能被地方共同承擔。</div>
+<p>第八個月，他們要走進德國魯爾區、日本名古屋與台灣電子供應鏈，討論企業如何重新設計自己。</p>
+<p>Noah 聽到「工廠參訪」時，立刻問：</p>
+<p>「有沒有可能這次主要在室內？」</p>
+<p>林又晴說：</p>
+<p>「你是怕風、怕船、怕熱，也怕走路。」</p>
+<p>Noah 認真地說：</p>
+<p>「我不是怕，我是用身體替讀者測試各種永續場景的人本程度。」</p>
+<p>沈知行笑了。</p>
+<p>窗外，旅館房間的燈亮著。</p>
+<p>他忽然伸手，把不需要的那盞關掉。</p>
+<p>不是因為這個動作會拯救世界。</p>
+<p>而是因為他終於知道，任何一盞燈的背後，都不只是一度電。</p>
+<p>那裡有風，有海，有管線，有工廠，有投資，有漁民，有社區會議，有政治選擇，也有某個地方的人正在問：</p>
+<p>為什麼我們要承擔這個改變？</p>
+<p>如果能源轉型不能回答這個問題，它就還沒有真正開始。</p>
+</article>
+<section class="notes-section" id="notes"><div class="notes-inner"><div class="notes-title">本月真實永續案例筆記與資料來源</div>
+
+</div></section>
+</main>
+<footer>
+  <a href="index.html">永續環遊世界365天　韓千山　著</a>
+</footer>
+</body>
+</html>

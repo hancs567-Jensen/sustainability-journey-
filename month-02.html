@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二個月　城市不是給車住的｜永續環遊世界365天</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:#8a6f2e;
+  --dark:#0d0c0a;--dark2:#141210;--dark3:#1c1a16;--dark4:#242118;
+  --text:#d4cbbf;--text-dim:#7a7060;--line:rgba(201,168,76,0.18);
+}
+body{background:var(--dark);color:var(--text);font-family:'Noto Serif TC',serif;font-weight:300;line-height:2;font-size:17px;overflow-x:hidden}
+nav{background:var(--dark2);border-bottom:1px solid var(--line);padding:0;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-home{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+.nav-home:hover{color:var(--gold)}
+.nav-toc{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.nav-toc::-webkit-scrollbar{display:none}
+.nav-toc a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:1px;color:var(--text-dim);text-decoration:none;padding:0 14px;white-space:nowrap;line-height:52px;border-bottom:2px solid transparent;transition:all .2s}
+.nav-toc a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.chapter-hero{background:linear-gradient(180deg,var(--dark2) 0%,var(--dark) 100%);border-bottom:1px solid var(--line);padding:80px 40px 64px;text-align:center;position:relative;overflow:hidden}
+.chapter-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-month{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:5px;color:var(--gold);margin-bottom:20px}
+.hero-title{font-size:clamp(24px,4vw,40px);font-weight:700;letter-spacing:3px;line-height:1.4;background:linear-gradient(135deg,#e8c97a,#c9a84c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.hero-cities{font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:4px;color:var(--text-dim)}
+main{max-width:700px;margin:0 auto;padding:72px 32px 100px}
+.chapter{margin-bottom:80px;opacity:0;animation:fadeUp .6s ease forwards}
+.chapter:nth-child(1){animation-delay:.1s}.chapter:nth-child(2){animation-delay:.2s}.chapter:nth-child(3){animation-delay:.3s}.chapter:nth-child(4){animation-delay:.4s}.chapter:nth-child(5){animation-delay:.5s}.chapter:nth-child(6){animation-delay:.6s}
+.chapter-num{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:12px}
+.chapter h2{font-size:clamp(18px,3vw,24px);font-weight:500;line-height:1.5;letter-spacing:1px;color:var(--gold-light);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.chapter h2 .city{font-weight:700;margin-right:4px}
+.chapter p{margin-bottom:1.6em;color:rgba(212,203,191,0.85)}
+.chapter strong{color:var(--text);font-weight:500}
+.notebook{background:rgba(201,168,76,0.06);border-left:2px solid var(--gold);padding:20px 24px;margin:36px 0;font-size:15px;color:var(--gold-light);line-height:2;font-style:italic;position:relative}
+.notebook::before{content:'筆記';display:block;font-family:'Noto Sans TC',sans-serif;font-style:normal;font-size:9px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:8px}
+.signage-wrap{text-align:center;margin:28px 0}
+.signage{display:inline-block;border:1px solid var(--gold-dim);padding:14px 32px;font-size:16px;font-weight:500;letter-spacing:3px;color:var(--gold-light)}
+.notes-section{background:var(--dark2);border-top:1px solid var(--line);padding:64px 32px 80px}
+.notes-inner{max-width:700px;margin:0 auto}
+.notes-title{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:40px}
+.note-card{border-top:1px solid var(--line);padding:28px 0}
+.note-card h3{font-size:15px;font-weight:500;color:var(--gold-light);margin-bottom:16px}
+.note-row{display:flex;gap:16px;font-size:13px;line-height:1.9;margin-bottom:6px}
+.note-label{font-family:'Noto Sans TC',sans-serif;color:var(--gold-dim);white-space:nowrap;min-width:80px}
+.note-val{color:rgba(212,203,191,0.7)}
+footer{background:var(--dark);border-top:1px solid var(--line);padding:40px;text-align:center}
+footer a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){main{padding:48px 20px 80px}.chapter-hero{padding:60px 24px 48px}.notes-section{padding:48px 20px 60px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-home" href="index.html">← 返回目錄</a>
+    <div class="nav-toc">
+      <a href="#ch1">§1</a><a href="#ch2">§2</a><a href="#ch3">§3</a>
+      <a href="#ch4">§4</a><a href="#ch5">§5</a><a href="#notes">案例</a>
+    </div>
+  </div>
+</nav>
+<div class="chapter-hero">
+  <div class="hero-month">MONTH 02</div>
+  <div class="hero-title">城市不是給車住的</div>
+  <div class="hero-cities">阿姆斯特丹　·　烏特勒支　·　哥本哈根</div>
+</div>
+<main>
+<article class="chapter" id="ch1"><div class="chapter-num">SECTION 01</div><h2><span class="city">阿姆斯特丹</span>　第一聲車鈴</h2>
+<p>飛機降落在阿姆斯特丹史基浦機場時，天空是低的。</p>
+<p>那種低不是陰沉，而是荷蘭特有的平。雲像被海風吹薄，灰白色鋪在城市上方，遠處的地平線幾乎沒有起伏。從機場進城的火車穿過一片片平坦土地，水道、草地、住宅、風車與鐵軌交錯在一起。這個國家像是長期與水協商出來的結果：土地不是理所當然存在，而是被修築、排水、管理、保護，才有了可以生活的地方。</p>
+<p>林又晴坐在車窗旁，一邊拍攝窗外，一邊說：</p>
+<p>「這裡好平，感覺城市是被畫在紙上的。」</p>
+<p>Noah 看著手機裡的路線。</p>
+<p>「這就是為什麼他們適合騎腳踏車。沒有坡，沒有藉口。」</p>
+<p>沈知行看向窗外。荷蘭一直是交通與城市規劃教材裡的經典案例。阿姆斯特丹有運河，有博物館，有自由開放的城市形象，也有全球聞名的自行車文化。可是他不想只拍一排自行車停在橋上的漂亮畫面。</p>
+<p>漂亮畫面太容易讓人誤會。</p>
+<p>很多人以為荷蘭人天生愛騎車，像是某種民族性格。可是城市行為從來不只是性格問題。人怎麼移動，通常取決於城市如何設計路權、速度、距離、停車、轉乘與安全感。</p>
+<p>他們在中央車站外租了三輛自行車。</p>
+<p>店員是一位高瘦的年輕人，頭髮被風吹得很亂。他把車交給三人時，只說了一句：</p>
+<p>「不要停在自行車道中間。」</p>
+<p>Noah 很有自信地點頭。</p>
+<p>「當然。」</p>
+<p>五分鐘後，他停在自行車道中間。</p>
+<p>第一聲車鈴從他身後響起。</p>
+<p>清脆、短促、毫不客氣。</p>
+<p>Noah 慌忙往右閃，差點撞上林又晴。第二輛自行車擦身而過，騎車的是一位看起來約七十歲的女士，穿著深藍色大衣，車籃裡放著一束鬱金香。她經過時沒有生氣，只用英文留下一句：</p>
+<p>「Think later. Ride now.」</p>
+<p>林又晴笑到差點扶不住車。</p>
+<p>「她叫你不要在人生路口思考。」</p>
+<p>Noah 皺眉。</p>
+<p>「我只是需要確認方向。」</p>
+<p>沈知行說：「在阿姆斯特丹，自行車道不是給你確認人生方向的地方。」</p>
+<p>他們沿著運河騎行。水面反射著細碎光線，兩側房屋窄而高，立面微微傾斜，像是幾百年來一直在互相依靠。橋上有人推著嬰兒車，有人牽狗，有人騎車經過，動作自然到像呼吸。</p>
+<p>林又晴把小型攝影機固定在胸前。</p>
+<p>「這裡的人騎車好像不用想。」</p>
+<p>沈知行回答：</p>
+<p>「不是不用想，是城市已經替他們把很多危險拿掉了。」</p>
+<p>他們停在一座橋邊。運河旁的路面被清楚分成行人、自行車、汽車。自行車道有自己的號誌、轉彎空間與停等區。汽車不是消失了，而是被放在不再支配城市的位置。</p>
+<p>這和台北很不同。</p>
+<p>台北的街道有時像一場持續妥協。行人在人行道上閃避機車、招牌、電箱、臨停車輛；機車在汽車與公車之間找縫隙；汽車在紅燈前排成一條緊張的線。每個人都很努力，但系統沒有真正讓任何人輕鬆。</p>
+<p>沈知行把車停好，在筆記本上寫下：</p>
+<p><strong>低碳交通不是要求人更有道德，而是讓比較好的選擇變得比較容易。</strong></p>
+<p>下午，他們拜訪第一位城市副角。</p>
+<p>她叫 Marieke，是阿姆斯特丹一位交通研究者，後來受邀參與多個荷蘭城市的自行車與公共空間計畫。她約他們在一間運河邊的咖啡館見面。她三十多歲，短髮，說話速度很快，像一個習慣在會議裡把複雜問題切成清楚段落的人。</p>
+<p>她問沈知行：</p>
+<p>「你們想拍荷蘭自行車？」</p>
+<p>沈知行說：「我想拍為什麼這麼多人願意騎。」</p>
+<p>Marieke 笑了。</p>
+<p>「那就不要拍自行車，拍路。」</p>
+<p>林又晴抬起頭。</p>
+<p>「拍路？」</p>
+<p>「對。」Marieke 用手指在桌上畫出一道線，「自行車只是結果。真正重要的是路權、交叉口、安全感、停車空間、學校距離、車速管理，還有一件最容易被忽略的事。」</p>
+<p>Noah 問：「什麼？」</p>
+<p>「孩子。」Marieke 說，「如果一座城市讓孩子可以自己騎車上學，這座城市才算真正相信自行車。」</p>
+<p>這句話讓三人都安靜了。</p>
+<p>咖啡館外，一群小學生騎車經過。前面的大人沒有一直回頭喊叫，只是穩穩騎著。孩子們穿著亮色外套，車輪濺起小水花。那一幕沒有壯觀的永續標語，卻比任何城市宣傳影片都有說服力。</p>
+<p>林又晴輕聲說：</p>
+<p>「在很多城市，孩子出門要被保護。在這裡，城市本身好像就在保護他們。」</p>
+<p>Marieke 點頭。</p>
+<p>「這就是人本交通。不是讓每個人都變成自行車英雄，而是讓老人、小孩、通勤者、觀光客，甚至像你朋友這種會停在路中間的人，都不至於立刻受傷。」</p>
+<p>Noah 抬頭。</p>
+<p>「我感覺自己被納入包容性設計了。」</p>
+<p>「某種程度上，是的。」Marieke 說。</p>
+<p>沈知行問她：「所以荷蘭成功的關鍵不是宣導？」</p>
+<p>「宣導有用，但很有限。」Marieke 說，「如果城市每天用道路設計告訴你：開車最快、停車最方便、行人最危險，那再多海報也沒有用。行為是被空間訓練出來的。」</p>
+<p>那天晚上，沈知行回到旅館，整理素材。畫面裡有運河、自行車、車鈴、小學生、老人、橋、咖啡館，還有 Noah 在路口驚慌失措的背影。</p>
+<p>他本來覺得這一段很好笑，後來卻看得很久。</p>
+<p>因為那個背影像很多第一次進入新制度的人。</p>
+<p>不是不願意改變，而是不知道如何在新的規則裡移動。</p>
+<p>城市如果真的要轉型，就不能只為已經熟練的人設計。它也要容納笨拙的人、猶豫的人、剛開始學的人。</p>
+<p>第一天的阿姆斯特丹，給他的不是自行車浪漫。</p>
+<p>而是一個問題：</p>
+<p><strong>如果永續生活需要太高的熟練度，那它就很難成為大多數人的日常。</strong></p>
+</article>
+<article class="chapter" id="ch2"><div class="chapter-num">SECTION 02</div><h2><span class="city">烏特勒支</span>　一座給腳踏車住的車站</h2>
+<p>從阿姆斯特丹到烏特勒支，只要半小時左右。</p>
+<p>火車離開首都後，窗外很快出現開闊平原。烏特勒支位於荷蘭中部，是重要鐵路樞紐，也是歷史悠久的大學城。中世紀教堂塔樓仍然站在城市中心，運河穿過老城，咖啡館、學生、商店、辦公樓與住宅混在一起。它不像阿姆斯特丹那麼被觀光想像包圍，卻更像一座日常運轉中的荷蘭城市。</p>
+<p>他們此行的目的地不是博物館，也不是教堂。</p>
+<p>是車站旁的自行車停車場。</p>
+<p>Noah 聽到時皺眉。</p>
+<p>「我們來歐洲第二個月，重點是參觀停車場？」</p>
+<p>林又晴說：「是世界級停車場。」</p>
+<p>「那還是停車場。」</p>
+<p>沈知行沒有解釋。他知道有些東西不能靠說，要靠走進去。</p>
+<p>烏特勒支中央車站旁的自行車停車設施像一座地下城市。入口寬敞，坡道平緩，騎士可以直接騎進去。裡面一排排自行車整齊停放，燈光明亮，指示清楚，電子看板顯示空位。它不像傳統印象中的停車棚，而像是公共運輸系統的一部分。</p>
+<p>林又晴舉起相機，慢慢轉了一圈。</p>
+<p>「這裡好像自行車的機場。」</p>
+<p>身旁有人用英文接話：</p>
+<p>「不。機場是讓人離開城市，這裡是讓人回到城市。」</p>
+<p>說話的人是 Marieke。</p>
+<p>她今天從阿姆斯特丹趕來，帶他們參觀烏特勒支的車站周邊規劃。她說烏特勒支的自行車停車場不只是容量大，而是整合了火車、城市中心、商業區與日常通勤。</p>
+<p>「如果你希望人們用自行車接駁火車，就不能只畫自行車道。」她說，「你要讓他們知道：我騎到車站後，車有地方放；我下班回來，車還找得到；下雨天也不會太痛苦；早上趕火車時，不會因為停車花十五分鐘。」</p>
+<p>沈知行問：</p>
+<p>「所以停車場也是低碳交通的一部分？」</p>
+<p>Marieke 看著他，像覺得這問題太基本。</p>
+<p>「當然。很多城市喜歡蓋漂亮的自行車道，卻忘了自行車也需要被安置。你不能要求人放棄汽車，卻不給他一個可靠的轉乘系統。」</p>
+<p>Noah 指著看不到盡頭的車架。</p>
+<p>「這裡到底有多少位置？」</p>
+<p>Marieke 說：</p>
+<p>「Stationsplein 這個設施有一萬兩千五百個自行車停車位。官方稱它是世界最大的自行車停車場。」</p>
+<p>Noah 低聲說：</p>
+<p>「我突然覺得汽車很孤單。」</p>
+<p>他們沿著坡道往下走。上班族推著車快速通過，學生邊聊天邊找車，老人慢慢扣上車鎖。這裡沒有壯麗建築的戲劇性，但有一種基礎設施才有的安定感：你幾乎不會注意它，因為它剛好有效。</p>
+<p>林又晴問 Marieke：</p>
+<p>「你們做這些，主要是為了減碳嗎？」</p>
+<p>Marieke 想了一下。</p>
+<p>「減碳是結果之一，但不是唯一目的。自行車城市同時處理很多問題：健康、空氣、噪音、空間、公平、交通效率。汽車很佔空間，一個人開一台車進市中心，對城市來說非常昂貴。自行車不是完美答案，但在短距離移動上，它很聰明。」</p>
+<p>沈知行注意到她用了「聰明」這個詞，而不是「環保」。</p>
+<p>這很重要。</p>
+<p>永續若只被包裝成犧牲，就很難擴散。可是當它變得更快、更便宜、更健康、更方便，它就不再只是道德，而是理性。</p>
+<p>中午，他們在車站旁的廣場吃三明治。廣場上人流不斷，有人拖行李，有人騎車，有人搭電車，有人在陽光下喝咖啡。遠處教堂鐘聲響起，提醒這座城市並不是因為現代交通才存在；它已經在這裡很久，只是一次又一次重新安排人如何進出、停留、生活。</p>
+<p>沈知行問 Marieke：</p>
+<p>「很多城市想學荷蘭自行車，但常常只學表面。妳覺得最容易被誤解的是什麼？」</p>
+<p>Marieke 把咖啡杯放下。</p>
+<p>「最容易被誤解的是，以為自行車政策只是交通政策。」</p>
+<p>「不然呢？」</p>
+<p>「它是土地政策、健康政策、氣候政策、兒童政策、老人政策，也是民主政策。」她說，「因為路權分配其實是在回答：城市把誰的生活放在前面？」</p>
+<p>這句話讓沈知行很久沒有說話。</p>
+<p>他想到台北的騎樓、機車、臨停、校門口、老人過馬路時短促的綠燈。他想到很多城市裡行人像是被容忍的剩餘空間，而不是被優先考慮的主體。</p>
+<p>林又晴把鏡頭對準廣場，忽然問：</p>
+<p>「那如果一個城市說自己很永續，可是走路很危險，算不算永續？」</p>
+<p>Marieke 沒有立刻回答。</p>
+<p>她看著廣場上一個牽著孩子的父親。孩子背著紅色書包，邊走邊吃餅乾。</p>
+<p>「如果一座城市不願意保護最慢的人，」她說，「它的永續就還不夠完整。」</p>
+<p>Noah 小聲說：</p>
+<p>「我覺得她每一句都可以做成海報。」</p>
+<p>林又晴說：</p>
+<p>「你先學會不要停在自行車道中間。」</p>
+<p>Noah 嘆了一口氣。</p>
+<p>「我的個人轉型需要政策補助。」</p>
+<p>下午結束時，Marieke 把他們帶到車站外的高處平台。從那裡可以看見鐵軌、自行車道、步行動線、電車線與商業區在同一個空間裡交錯。城市像一部複雜卻協調的機械，但裡面流動的不是零件，而是人。</p>
+<p>沈知行在筆記本上寫：</p>
+<p><strong>一座真正低碳的城市，不是讓人移動得更少，而是讓每一次移動都更有意義、更有效率，也更不傷害其他人。</strong></p>
+</article>
+<article class="chapter" id="ch3"><div class="chapter-num">SECTION 03</div><h2><span class="city">哥本哈根</span>　騎車的人不需要英雄</h2>
+<p>二月的哥本哈根，風很冷。</p>
+<p>那種冷不是尖銳，而是從海港慢慢滲進衣服裡。城市沿著水展開，港口、橋梁、設計建築、舊倉庫與新住宅彼此相鄰。哥本哈根是丹麥的首都，也是北歐重要的文化、設計與商業中心。它常被放進「宜居城市」「自行車城市」「綠色城市」的案例裡，但真正走進街道，沈知行發現它最有力量的地方不是標榜自己很綠，而是許多低碳行為已經變得很普通。</p>
+<p>普通到不需要被稱讚。</p>
+<p>早上八點，他們站在一座自行車橋旁。通勤人潮從橋上滑過，有西裝外套，有厚毛帽，有雨衣，有親子車，有載貨車，有人一手握把一手拿咖啡，動作熟練得讓 Noah 看得目瞪口呆。</p>
+<p>「他們都不用怕嗎？」Noah 問。</p>
+<p>林又晴說：「他們怕的是你。」</p>
+<p>沈知行笑了。</p>
+<p>一位丹麥城市設計顧問 Mads 在橋邊等他們。他身材高大，穿著黑色防風外套，背著一個舊帆布包。他沒有騎很新潮的自行車，只是一台看起來用了很多年的城市車。</p>
+<p>Mads 帶他們沿著港邊騎行。路線平順，號誌清楚，自行車道寬到可以並排。某些路口有提前停等區，某些路段有自行車專用橋，讓騎士不必與汽車爭奪狹窄空間。</p>
+<p>「哥本哈根人騎車，是因為環保嗎？」林又晴問。</p>
+<p>Mads 笑了。</p>
+<p>「有些人是。但大多數人只是因為快、便宜、可靠。」</p>
+<p>Noah 說：</p>
+<p>「所以永續成功的祕密是不講永續？」</p>
+<p>Mads 想了一下。</p>
+<p>「也不是。應該說，不要只講永續。你要讓永續變成更好的生活經驗。如果一個政策只要求人犧牲，它很快會變成政治問題。如果它讓人每天早上少塞車、少花錢、多一點運動、多一點城市感，它就會變成生活方式。」</p>
+<p>他們停在一座自行車橋上。橋下水面灰藍，遠方有設計感強烈的建築，海港邊有人慢跑，有人在寒風裡喝咖啡。哥本哈根的城市空間不像是在炫耀什麼，它比較像在提醒：現代城市可以不用被汽車噪音完全佔據。</p>
+<p>沈知行問：</p>
+<p>「但這樣的城市會不會很貴？會不會只有中產階級享受得到？」</p>
+<p>Mads 看了他一眼。</p>
+<p>「這是好問題。人本城市如果只讓有錢社區變美，就不是人本，只是城市品牌。自行車與公共空間的好處，必須進入不同收入、不同年齡、不同背景的社區。否則綠色城市也可能變成排除人的城市。」</p>
+<p>林又晴立刻轉向沈知行。</p>
+<p>「這句要放進紀錄片。」</p>
+<p>Noah 舉手。</p>
+<p>「我也有一句。」</p>
+<p>「什麼？」</p>
+<p>「騎車的人不需要英雄，只需要不要被車撞。」</p>
+<p>Mads 聽完翻譯後，笑得很開心。</p>
+<p>「其實這句也對。」</p>
+<p>中午，他們進入一間社區共享廚房。這裡原本是老倉庫，後來改造成社區活動空間，提供共食、食物工作坊、修理活動與居民會議。牆上貼著各種活動公告：剩食料理課、兒童自行車安全課、二手衣交換日、社區能源說明會。</p>
+<p>負責人是一位中年女性，叫 Sofie。她不是政府官員，也不是企業永續長，而是社區組織者。她說英文時語氣很慢，每一句都像先在心裡排好位置。</p>
+<p>她帶他們看廚房裡的冰箱。</p>
+<p>「這些食材來自附近市場與超市，還能吃，但不適合上架。我們會辦共食，也教居民怎麼用剩餘食材做晚餐。」</p>
+<p>沈知行問：</p>
+<p>「所以這裡不只是交通案例？」</p>
+<p>Sofie 笑了。</p>
+<p>「城市從來不只是一個主題。你們早上騎車來，經過公共空間，現在坐在共享廚房，晚上可能去社區會議。這些事情連在一起，才是生活。」</p>
+<p>林又晴問：</p>
+<p>「那妳覺得永續城市最難的是什麼？」</p>
+<p>Sofie 擦著桌面，想了很久。</p>
+<p>「最難的是不要把人當成政策目標，而是當成共同設計者。」</p>
+<p>這句話很簡單，卻把沈知行這幾天看到的東西連在一起。</p>
+<p>阿姆斯特丹的路權，烏特勒支的停車場，哥本哈根的自行車橋與共享廚房，其實都不只是硬體。真正關鍵的是城市是否願意承認：人不只是被管理的交通流量，不只是碳排統計裡的人均數字，而是會害怕、會偷懶、會迷路、會趕時間、會照顧孩子、會變老、會犯錯的生活者。</p>
+<p>下午離開共享廚房時，Noah 主動說要帶路。</p>
+<p>林又晴立刻拒絕。</p>
+<p>「你上次帶路帶到占卜店。」</p>
+<p>Noah 說：</p>
+<p>「那是首爾的城市探索。」</p>
+<p>沈知行看了一眼地圖，決定讓他試一次。</p>
+<p>結果 Noah 帶他們騎進了一條施工中的路。</p>
+<p>三人只好下車，推著自行車繞過工地。風從海港吹來，林又晴的帽子差點飛走。Noah 一邊道歉，一邊堅持這是「非預期的城市韌性測試」。</p>
+<p>就在他們繞路時，沈知行注意到旁邊有一條臨時自行車道。雖然道路施工，但城市沒有把自行車與行人隨便趕到汽車旁邊，而是用清楚標線與圍欄重新安排動線。</p>
+<p>他停下來拍了一段。</p>
+<p>林又晴問：「這也要拍？」</p>
+<p>「要。」沈知行說，「城市的價值不是只在完美狀態下才看得出來。施工、下雨、迷路、尖峰時間，才知道它是不是真的把人放在心上。」</p>
+<p>Noah 立刻說：</p>
+<p>「所以我迷路是有貢獻的。」</p>
+<p>「有限度的貢獻。」林又晴說。</p>
+<p>傍晚，他們坐在港邊，看著自行車燈一盞盞亮起。小小的白光與紅光沿著橋面流動，像一條安靜的河。沒有汽車引擎聲，只有風、車輪與遠處人聲。</p>
+<p>沈知行在筆記本上寫下：</p>
+<p><strong>人本交通的目標，不是讓城市看起來更先進，而是讓普通人不用變勇敢，也能安全地生活。</strong></p>
+</article>
+<article class="chapter" id="ch4"><div class="chapter-num">SECTION 04</div><h2><span class="city">十五分鐘</span>　近不是限制，是自由</h2>
+<p>第二個月最後一週，他們留在哥本哈根整理素材，同時與巴黎、米蘭、巴塞隆納幾位城市研究者進行線上訪談，討論近年常被提起的「15 分鐘城市」。</p>
+<p>林又晴第一次聽到這個概念時，直覺地說：</p>
+<p>「就是所有東西都在十五分鐘內？」</p>
+<p>Noah 說：</p>
+<p>「聽起來像便利商店的都市規劃版。」</p>
+<p>沈知行笑了。</p>
+<p>「不完全是。它不是說人不能離開自己的社區，而是希望日常所需能在步行或騎車可達的範圍內取得。學校、公園、商店、醫療、工作空間、文化活動，如果都要靠長距離開車才能到，城市就會變得很耗能，也很排除沒有車的人。」</p>
+<p>線上會議裡，一位來自巴黎的城市研究者 Claire 說：</p>
+<p>「15 分鐘城市最容易被誤解成一種限制。但它原本的精神是增加選擇，而不是減少自由。」</p>
+<p>林又晴問：</p>
+<p>「為什麼會被誤解？」</p>
+<p>Claire 回答：</p>
+<p>「因為任何城市改造都會碰到政治。有人擔心停車位減少，有人擔心房價上漲，有人擔心被政府管制移動。其實真正好的近便城市，不是不讓你去遠方，而是不強迫你每天為基本生活跑很遠。」</p>
+<p>沈知行把這句話記下來。</p>
+<p><strong>不是不讓你去遠方，而是不強迫你每天為基本生活跑很遠。</strong></p>
+<p>這句話也讓他想到台灣。</p>
+<p>很多台灣城市其實某種程度上已經有「近便生活」的基礎。巷口有早餐店、便利商店、藥局、診所、傳統市場、補習班、小公園。可是問題也同時存在：人行空間破碎，騎樓被占用，機車與汽車壓縮行人，老年人與兒童的移動安全不足。台灣不是沒有十五分鐘生活圈，而是常常沒有十五分鐘安全步行圈。</p>
+<p>隔天，他們回到哥本哈根一個住宅社區拍攝。那裡有幼兒園、公園、社區廚房、超市、自行車停放空間與公共運輸站點。Sofie 再次出現，帶他們走一圈。</p>
+<p>她指著不遠處的幼兒園說：</p>
+<p>「很多家長早上騎車送孩子，再去搭公共運輸或直接騎去上班。這不是因為每個人都特別有環保意識，而是因為路線合理。」</p>
+<p>林又晴問：</p>
+<p>「如果要把這種概念放到亞洲高密度城市，會有什麼不同？」</p>
+<p>Sofie 想了想。</p>
+<p>「亞洲城市其實有很強的街道生活，也有高密度服務。你們的挑戰可能不是距離，而是安全、空氣、熱、以及誰有權使用街道。」</p>
+<p>這句話讓沈知行幾乎立刻想到台北夏天的人行道。熱氣從柏油路往上冒，冷氣室外機排出熱風，行人繞過違停車輛，老人推著菜車走在車道邊緣。距離不遠，但走起來很累。</p>
+<p>近，不等於可達。</p>
+<p>可達，也不等於舒適。</p>
+<p>舒適，更不等於公平。</p>
+<p>晚上，他們在旅館餐廳整理第二個月的素材。螢幕上有阿姆斯特丹的車鈴、烏特勒支的自行車停車場、哥本哈根的橋、社區廚房、臨時自行車道，還有 Noah 在施工路段辯稱自己「貢獻城市韌性測試」的畫面。</p>
+<p>林又晴說：</p>
+<p>「我覺得這個月的主題不是自行車。」</p>
+<p>沈知行看著她。</p>
+<p>「那是什麼？」</p>
+<p>「是城市到底相信誰。」</p>
+<p>Noah 抬頭。</p>
+<p>「什麼意思？」</p>
+<p>林又晴說：</p>
+<p>「如果城市相信汽車，就把最好的空間給汽車。如果城市相信消費，就把一樓都變成商店。如果城市相信孩子，就會讓孩子可以自己上學。如果城市相信老人，就會讓路口不要那麼可怕。如果城市相信人可以不用一直趕路，就會把生活放近一點。」</p>
+<p>沈知行沒有說話。</p>
+<p>他覺得這個月她比他更快抵達答案。</p>
+<p>Noah 把叉子放下，難得認真地說：</p>
+<p>「那我覺得城市也要相信迷路的人。」</p>
+<p>林又晴原本想笑，但最後只是點頭。</p>
+<p>「對。也要相信迷路的人。」</p>
+<p>沈知行低頭，在筆記本寫下第二個月最後一句：</p>
+<p><strong>一座好城市，不是讓人永遠</strong><strong>不</strong><strong>迷路，而是讓人迷路時仍然安全，仍然能找到回到生活的路。</strong></p>
+</article>
+<section class="notes-section" id="notes"><div class="notes-inner"><div class="notes-title">本月真實永續案例筆記與資料來源</div>
+
+</div></section>
+</main>
+<footer>
+  <a href="index.html">永續環遊世界365天　韓千山　著</a>
+</footer>
+</body>
+</html>
