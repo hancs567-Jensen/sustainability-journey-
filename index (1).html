@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>永續環遊世界365天｜韓千山</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim: #8a6f2e;
+  --dark: #0d0c0a;
+  --dark2: #141210;
+  --dark3: #1c1a16;
+  --dark4: #242118;
+  --text: #d4cbbf;
+  --text-dim: #7a7060;
+  --line: rgba(201,168,76,0.18);
+}
+
+body {
+  background: var(--dark);
+  color: var(--text);
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 300;
+  line-height: 1.9;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 80px 40px;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.06) 0%, transparent 70%),
+    var(--dark);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.04) 59px, rgba(201,168,76,0.04) 60px),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.04) 59px, rgba(201,168,76,0.04) 60px);
+  pointer-events: none;
+}
+
+.hero-badge {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  padding: 6px 20px;
+  margin-bottom: 48px;
+  opacity: 0;
+  animation: fadeUp .8s ease forwards .2s;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  opacity: 0;
+  animation: fadeUp .8s ease forwards .4s;
+  background: linear-gradient(135deg, #e8c97a 0%, #c9a84c 50%, #a07830 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: var(--text-dim);
+  margin-bottom: 60px;
+  opacity: 0;
+  animation: fadeUp .8s ease forwards .5s;
+}
+
+.hero-line {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  margin: 0 auto 60px;
+  opacity: 0;
+  animation: fadeUp .8s ease forwards .6s;
+}
+
+.hero-quote {
+  max-width: 560px;
+  font-size: 15px;
+  color: rgba(212,203,191,0.7);
+  line-height: 2;
+  font-style: italic;
+  opacity: 0;
+  animation: fadeUp .8s ease forwards .7s;
+}
+
+.hero-cta {
+  margin-top: 56px;
+  opacity: 0;
+  animation: fadeUp .8s ease forwards .9s;
+}
+
+.hero-cta a {
+  display: inline-block;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  padding: 12px 32px;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.hero-cta a:hover {
+  background: rgba(201,168,76,0.1);
+  border-color: var(--gold);
+}
+
+/* ── AUTHOR ── */
+.author {
+  background: var(--dark2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 80px 40px;
+}
+
+.author-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.author-label {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.author-name {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #e8c97a, #c9a84c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.author-name-en {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--text-dim);
+}
+
+.author-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold-dim);
+  margin: 28px 0;
+}
+
+.author-affil {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--gold-dim);
+  line-height: 2;
+}
+
+.author-bio p {
+  font-size: 15px;
+  color: rgba(212,203,191,0.8);
+  line-height: 2.1;
+  margin-bottom: 16px;
+}
+
+/* ── PREFACE ── */
+.preface {
+  padding: 80px 40px;
+  background: var(--dark3);
+}
+
+.preface-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.preface-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--gold-light);
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.preface-inner p {
+  font-size: 15px;
+  line-height: 2.2;
+  color: rgba(212,203,191,0.75);
+  margin-bottom: 20px;
+}
+
+.preface-inner strong {
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+.preface-key {
+  border-left: 2px solid var(--gold-dim);
+  padding: 20px 24px;
+  margin: 32px 0;
+  background: rgba(201,168,76,0.04);
+  font-size: 15px;
+  color: var(--gold-light);
+  line-height: 2;
+  font-style: italic;
+}
+
+/* ── CHAPTERS ── */
+.chapters {
+  padding: 80px 40px;
+  background: var(--dark2);
+}
+
+.chapters-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 2px;
+  margin-top: 48px;
+}
+
+.chapter-card {
+  background: var(--dark3);
+  border: 1px solid var(--line);
+  padding: 32px 36px;
+  text-decoration: none;
+  display: block;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.chapter-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px; height: 0;
+  background: var(--gold);
+  transition: height .3s;
+}
+
+.chapter-card:hover::before { height: 100%; }
+
+.chapter-card:hover {
+  background: var(--dark4);
+  border-color: var(--gold-dim);
+}
+
+.chapter-num {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold-dim);
+  margin-bottom: 12px;
+}
+
+.chapter-title {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 1px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.chapter-card:hover .chapter-title {
+  color: var(--gold-light);
+}
+
+.chapter-cities {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+}
+
+.chapter-arrow {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  font-size: 12px;
+  color: var(--gold-dim);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all .3s;
+}
+
+.chapter-card:hover .chapter-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark);
+  border-top: 1px solid var(--line);
+  padding: 48px 40px;
+  text-align: center;
+}
+
+footer p {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--text-dim);
+  line-height: 2.2;
+}
+
+footer .gold-text {
+  color: var(--gold-dim);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  .author-inner { grid-template-columns: 1fr; gap: 40px; }
+  .chapters-grid { grid-template-columns: 1fr; }
+  .hero { padding: 60px 24px; }
+  .author, .preface, .chapters { padding: 60px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">非虛構旅行文學</div>
+  <h1>永續環遊世界<br>365天</h1>
+  <div class="hero-sub">韓千山　著</div>
+  <div class="hero-line"></div>
+  <p class="hero-quote">如果永續不是口號，不是報告，不是政策文件，<br>而是世界各地正在發生的生活現場，那它會長什麼樣子？</p>
+  <div class="hero-cta">
+    <a href="#chapters">開始閱讀</a>
+  </div>
+</section>
+
+<!-- AUTHOR -->
+<section class="author">
+  <div class="author-inner">
+    <div>
+      <div class="author-label">AUTHOR</div>
+      <div class="author-name">韓千山</div>
+      <div class="author-name-en">Han Qianshan</div>
+      <div class="author-divider"></div>
+      <div class="author-affil">
+        輔仁大學<br>
+        財務金融暨國際企業學系<br>
+        ──<br>
+        金融經濟學者・作家
+      </div>
+    </div>
+    <div class="author-bio">
+      <p>長期從事金融、企業管理與永續議題之教學研究，關注企業轉型、供應鏈治理、風險管理與永續金融。</p>
+      <p>擅長以故事筆法呈現複雜議題，兼具實務觀察與管理洞見。學術研究之外，亦長期以中文書寫科幻小說及非虛構作品，探索AI、技術與人類社會的深層關係。</p>
+      <p>《永續環遊世界365天》是一本跨越十二個月、走訪全球現場的行走紀錄，試圖用故事重新理解永續如何在真實生活裡發生。</p>
+    </div>
+  </div>
+</section>
+
+<!-- PREFACE -->
+<section class="preface">
+  <div class="preface-inner">
+    <div class="section-label">序　PREFACE</div>
+    <div class="preface-title">走一圈世界，為了重新看見我們如何生活</div>
+
+    <p>我們每天都在使用世界。早晨的一杯咖啡、一件衣服、一班捷運、一盞燈、一份便當、一個外帶杯、一筆投資、一棟房子、一條街道，看起來都只是日常生活的一部分。但如果把視線拉遠，就會發現，這些日常背後都有一條很長的路：有人種植、有人製造、有人運輸、有人設計、有人融資、有人承擔污染、有人面對氣候風險，也有人努力讓這一切變得更公平、更低碳、更能長久。</p>
+
+    <div class="preface-key">人類能不能重新設計自己的生活方式？</div>
+
+    <p>於是，主角沈知行帶著攝影師林又晴與翻譯 Noah，開始一趟為期一年的旅程。他們不是去尋找完美國家，也不是去收集漂亮案例。他們走進城市、港口、工廠、市場、老街、能源島、金融中心、地方小鎮與社區廚房，遇見正在改變世界的人。</p>
+
+    <p>這本書不把永續寫成完美答案，而是寫成真實世界裡的選擇、協商、衝突與希望。它想讓讀者知道：永續不是一條乾淨筆直的道路，而是一條充滿轉彎、誤點、迷路、爭論與重新理解的旅程。</p>
+
+    <p>走了一圈世界之後，沈知行真正明白的是：<strong>台灣不能只是模仿別人。台灣的永續，必須從自己的生活長出來。</strong></p>
+
+    <div class="preface-key">我們要如何把這個世界交給下一個人時，仍然讓他能夠生活？</div>
+
+    <p>這趟旅程，從遠方開始。但真正的目的地，是我們腳下的地方。</p>
+  </div>
+</section>
+
+<!-- CHAPTERS -->
+<section class="chapters" id="chapters">
+  <div class="chapters-inner">
+    <div class="section-label">目錄　CONTENTS</div>
+
+    <div class="chapters-grid">
+
+      <a class="chapter-card" href="month-01.html">
+        <div class="chapter-num">MONTH 01</div>
+        <div class="chapter-title">從一個行李箱開始</div>
+        <div class="chapter-cities">台北・首爾・巴黎</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-02.html">
+        <div class="chapter-num">MONTH 02</div>
+        <div class="chapter-title">城市不是給車住的</div>
+        <div class="chapter-cities">阿姆斯特丹・烏特勒支・哥本哈根</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-03.html">
+        <div class="chapter-num">MONTH 03</div>
+        <div class="chapter-title">會呼吸的房子</div>
+        <div class="chapter-cities">新加坡・東京・弗萊堡</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-04.html">
+        <div class="chapter-num">MONTH 04</div>
+        <div class="chapter-title">垃圾其實沒有消失</div>
+        <div class="chapter-cities">柏林・斯德哥爾摩・台南</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-05.html">
+        <div class="chapter-num">MONTH 05</div>
+        <div class="chapter-title">一件衣服的世界旅行</div>
+        <div class="chapter-cities">米蘭・達卡・台灣紡織聚落</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-06.html">
+        <div class="chapter-num">MONTH 06</div>
+        <div class="chapter-title">食物、土地與慢下來的人</div>
+        <div class="chapter-cities">法國・義大利・日本里山</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-07.html">
+        <div class="chapter-num">MONTH 07</div>
+        <div class="chapter-title">能源不是插頭後面的事</div>
+        <div class="chapter-cities">丹麥・台灣離岸風電</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-08.html">
+        <div class="chapter-num">MONTH 08</div>
+        <div class="chapter-title">企業如何重新設計自己</div>
+        <div class="chapter-cities">工廠・流程・供應鏈</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-09.html">
+        <div class="chapter-num">MONTH 09</div>
+        <div class="chapter-title">金融也會決定地球命運</div>
+        <div class="chapter-cities">倫敦・紐約・新加坡・台北</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-10.html">
+        <div class="chapter-num">MONTH 10</div>
+        <div class="chapter-title">當氣候變成日常風險</div>
+        <div class="chapter-cities">鹿特丹・曼谷・威尼斯</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-11.html">
+        <div class="chapter-num">MONTH 11</div>
+        <div class="chapter-title">文化保存也是永續</div>
+        <div class="chapter-cities">京都・巴塞隆納・台灣小鎮</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+      <a class="chapter-card" href="month-12.html">
+        <div class="chapter-num">MONTH 12</div>
+        <div class="chapter-title">回到台灣，世界其實在身邊</div>
+        <div class="chapter-cities">台灣各地</div>
+        <div class="chapter-arrow">→</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="gold-text">永續環遊世界365天</p>
+  <p>韓千山　著</p>
+  <p style="margin-top:16px; font-size:10px;">輔仁大學財務金融暨國際企業學系</p>
+</footer>
+
+</body>
+</html>

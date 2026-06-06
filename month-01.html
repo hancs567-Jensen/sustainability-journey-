@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一個月　從一個行李箱開始｜永續環遊世界365天</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:#8a6f2e;
+  --dark:#0d0c0a;--dark2:#141210;--dark3:#1c1a16;--dark4:#242118;
+  --text:#d4cbbf;--text-dim:#7a7060;--line:rgba(201,168,76,0.18);
+}
+body{background:var(--dark);color:var(--text);font-family:'Noto Serif TC',serif;font-weight:300;line-height:2;font-size:17px;overflow-x:hidden}
+
+/* NAV */
+nav{background:var(--dark2);border-bottom:1px solid var(--line);padding:0;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-home{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+.nav-home:hover{color:var(--gold)}
+.nav-toc{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.nav-toc::-webkit-scrollbar{display:none}
+.nav-toc a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:1px;color:var(--text-dim);text-decoration:none;padding:0 14px;white-space:nowrap;line-height:52px;border-bottom:2px solid transparent;transition:all .2s}
+.nav-toc a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* HERO */
+.chapter-hero{background:linear-gradient(180deg,var(--dark2) 0%,var(--dark) 100%);border-bottom:1px solid var(--line);padding:80px 40px 64px;text-align:center;position:relative;overflow:hidden}
+.chapter-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-month{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:5px;color:var(--gold);margin-bottom:20px}
+.hero-title{font-size:clamp(24px,4vw,40px);font-weight:700;letter-spacing:3px;line-height:1.4;background:linear-gradient(135deg,#e8c97a,#c9a84c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+.hero-cities{font-family:'Noto Sans TC',sans-serif;font-size:12px;letter-spacing:4px;color:var(--text-dim)}
+
+/* MAIN */
+main{max-width:700px;margin:0 auto;padding:72px 32px 100px}
+
+/* CHAPTER ARTICLE */
+.chapter{margin-bottom:80px;opacity:0;animation:fadeUp .6s ease forwards}
+.chapter:nth-child(1){animation-delay:.1s}
+.chapter:nth-child(2){animation-delay:.2s}
+.chapter:nth-child(3){animation-delay:.3s}
+.chapter:nth-child(4){animation-delay:.4s}
+.chapter:nth-child(5){animation-delay:.5s}
+
+.chapter-num{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:12px}
+
+.chapter h2{font-size:clamp(18px,3vw,24px);font-weight:500;line-height:1.5;letter-spacing:1px;color:var(--gold-light);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.chapter h2 .city{font-weight:700;margin-right:4px}
+
+.chapter p{margin-bottom:1.6em;color:rgba(212,203,191,0.85)}
+.chapter strong{color:var(--text);font-weight:500}
+
+/* NOTEBOOK */
+.notebook{background:rgba(201,168,76,0.06);border-left:2px solid var(--gold);padding:20px 24px;margin:36px 0;font-size:15px;color:var(--gold-light);line-height:2;font-style:italic;position:relative}
+.notebook::before{content:'筆記';display:block;font-family:'Noto Sans TC',sans-serif;font-style:normal;font-size:9px;letter-spacing:4px;color:var(--gold-dim);margin-bottom:8px}
+
+/* SIGNAGE */
+.signage-wrap{text-align:center;margin:28px 0}
+.signage{display:inline-block;border:1px solid var(--gold-dim);padding:14px 32px;font-size:16px;font-weight:500;letter-spacing:3px;color:var(--gold-light)}
+
+/* NOTES */
+.notes-section{background:var(--dark2);border-top:1px solid var(--line);padding:64px 32px 80px}
+.notes-inner{max-width:700px;margin:0 auto}
+.notes-title{font-family:'Noto Sans TC',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:40px}
+.note-card{border-top:1px solid var(--line);padding:28px 0}
+.note-card h3{font-size:15px;font-weight:500;color:var(--gold-light);margin-bottom:16px}
+.note-row{display:flex;gap:16px;font-size:13px;line-height:1.9;margin-bottom:6px}
+.note-label{font-family:'Noto Sans TC',sans-serif;color:var(--gold-dim);white-space:nowrap;min-width:80px}
+.note-val{color:rgba(212,203,191,0.7)}
+
+/* FOOTER */
+footer{background:var(--dark);border-top:1px solid var(--line);padding:40px;text-align:center}
+footer a{font-family:'Noto Sans TC',sans-serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--gold)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){main{padding:48px 20px 80px}.chapter-hero{padding:60px 24px 48px}.notes-section{padding:48px 20px 60px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-home" href="index.html">← 返回目錄</a>
+    <div class="nav-toc">
+      <a href="#ch1">台北</a>
+      <a href="#ch2">首爾</a>
+      <a href="#ch3">巴黎</a>
+      <a href="#ch4">巴黎北站</a>
+      <a href="#ch5">月末筆記</a>
+      <a href="#notes">案例</a>
+    </div>
+  </div>
+</nav>
+
+<div class="chapter-hero">
+  <div class="hero-month">MONTH 01</div>
+  <div class="hero-title">從一個行李箱開始</div>
+  <div class="hero-cities">台北　·　首爾　·　巴黎</div>
+</div>
+
+<main>
+<article class="chapter" id="ch1"><div class="chapter-num">SECTION 01</div><h2><span class="city">台北</span>　出發前，世界已經在塑膠袋裡</h2>
+<p>沈知行出發那天，台北下著細雨。</p>
+<p>那種雨不是會讓人狼狽的暴雨，而是會讓城市慢慢發亮的雨。柏油路像被擦過一層油，機車從巷口滑出來，後照鏡上掛著水珠；便利商店的玻璃門一開一關，熱咖啡、關東煮、影印機與微波便當的氣味混在一起，形成一種只有台灣城市才有的清晨味道。</p>
+<p>林又晴站在捷運站出口，背著攝影包，手上拿著一杯冰美式。</p>
+<p>沈知行看了一眼那個塑膠杯。</p>
+<p>「妳不是說要從今天開始記錄永續生活？」他問。</p>
+<p>林又晴低頭看了看手裡的杯子，表情完全沒有愧疚。</p>
+<p>「對啊，所以我從今天開始記錄人類失敗的第一步。」</p>
+<p>站在旁邊的 Noah 把手機從口袋裡抽出來，正在確認航班。他有一張過度自信的臉，像是全世界的交通系統都應該配合他的語感運作。</p>
+<p>「我們還有兩小時。」Noah 說，「以台北人的速度，這叫非常充裕。」</p>
+<p>沈知行看著他。</p>
+<p>「上次你說非常充裕，結果我們在高鐵上用跑的吃完一個便當。」</p>
+<p>「那是高鐵便當設計得太適合行動中使用，不是我的錯。」Noah 說。</p>
+<p>沈知行沒有回答。他把行李箱拉到身邊，手指輕輕按在拉桿上。這只行李箱陪他跑過很多國家，倫敦、雅加達、東京、杜拜、柏林。他曾經帶著它走進企業總部，走進金融機構的會議室，走進那些玻璃帷幕後面過度乾淨的簡報室。</p>
+<p>那時候，他的工作是替企業撰寫永續策略，替銀行分析 ESG 風險，替投資人解釋一間公司的碳排曲線如何影響未來資本成本。他很熟悉那些詞：範疇三、雙重重大性、氣候情境分析、內部碳價、綠色授信、供應鏈韌性。</p>
+<p>他也曾經相信，只要數據夠完整，報告夠透明，模型夠精準，世界就會慢慢往對的方向移動。</p>
+<p>直到三年前，他參與一個東南亞製造業的永續評估案。公司報告裡寫著「水資源循環利用率提升」「在地社區共榮」「綠色製程轉型」。報告裡的照片乾淨明亮，員工穿著制服微笑，工廠牆上漆著一片象徵低碳的綠。</p>
+<p>可是他們離開廠區時，車子繞過後門。後門外有一條河。</p>
+<p>河水是黑的。</p>
+<p>不是陰天造成的暗色，而是一種失去生命感的黑。水面上浮著泡沫，幾隻塑膠袋卡在岸邊的雜草裡，像某種被城市遺棄的白色魚群。</p>
+<p>那天晚上，沈知行回到飯店，打開電腦，盯著那份即將完成的 ESG 報告。他突然覺得所有漂亮的段落都很輕，輕到可以浮在那條黑河上。</p>
+<p>從那一天開始，他不太相信只靠報告能改變世界。</p>
+<p>所以他決定離開。</p>
+<p>離開顧問公司，離開會議室，離開那些過度平整的簡報圖表。他接下一個國際影像平台的企劃，用一年時間拍攝一部紀錄片，也寫下一本遊記。</p>
+<p>企劃名稱很簡單：</p>
+<p><strong>永續環遊世界</strong>天。</p>
+<p>不是去看哪個國家比較先進，不是去收集漂亮案例，也不是去證明永續一定美好。</p>
+<p>而是去現場看。</p>
+<p>看城市如何移動，看食物如何被浪費，看衣服如何被製造，看能源如何被爭奪，看金融如何選擇未來，看文化如何在觀光裡被保存或消耗。</p>
+<p>最重要的是，看那些真正把永續做進生活裡的人。</p>
+<p>「你在想什麼？」林又晴問。</p>
+<p>沈知行回過神來。</p>
+<p>「我在想，我們第一站還沒到，台北已經給我們第一題了。」</p>
+<p>「什麼題？」</p>
+<p>沈知行指了指便利商店門口。</p>
+<p>一個上班族拿著兩個便當、一瓶茶、一包濕紙巾、兩雙免洗筷，店員熟練地把所有東西分裝進兩個塑膠袋。上班族接過去，匆匆往捷運站走。</p>
+<p>「便利，」沈知行說，「到底是城市的幸福，還是城市最大的盲點？」</p>
+<p>林又晴看著那個人的背影，低頭又看了一眼自己的塑膠杯。</p>
+<p>「那我現在是不是應該把它喝完，至少不要浪費？」</p>
+<p>Noah 點頭。</p>
+<p>「從永續角度看，妳已經犯錯了，但可以把錯誤喝完。」</p>
+<p>林又晴抬腳踢了他一下。</p>
+</article>
+<article class="chapter" id="ch1"><div class="chapter-num">SECTION 01</div><h2><span class="city">台北</span>　出發前，世界已經在塑膠袋裡</h2>
+<p>沈知行打開筆記本，在第一頁寫下：</p>
+<div class="notebook"><strong>第一天：永續不是從遠方開始，而是從結帳前的一秒開始。</strong></div>
+</article>
+<article class="chapter" id="ch2"><div class="chapter-num">SECTION 02</div><h2><span class="city">首爾</span>　零廢棄地圖上的迷路</h2>
+<p>首爾的冬天比台北冷得乾脆。</p>
+<p>寒風從高樓之間穿過，像一把細刀。街道乾淨、快速、明亮，咖啡店一家接著一家，玻璃窗內坐滿了年輕人，筆電螢幕亮著，桌上放著冰美式、可頌、手機與耳機。這座城市像一台高度運轉的機器，時尚、科技、流行文化與消費速度在同一條街上交會。</p>
+<p>他們原本只是在首爾轉機，卻因為巴黎航班延誤，被迫多停留一天。</p>
+<p>Noah 說：「這叫命運安排。」</p>
+<p>林又晴說：「這叫你買太便宜的轉機票。」</p>
+<p>沈知行沒有插話。他盯著手機上的地圖。首爾市政府曾推動零廢棄商店地圖，標示提供散裝、補充、減少包裝或鼓勵自備容器的店家。他覺得這正好可以成為旅程的第一個意外現場。</p>
+<p>「我們去這裡。」他把手機轉給兩人看。</p>
+<p>林又晴湊近。</p>
+<p>「零廢棄商店？」</p>
+<p>「對。」</p>
+<p>Noah 看了一眼韓文地址，立刻點頭。</p>
+<p>「我知道路。」</p>
+<p>沈知行和林又晴同時看他。</p>
+<p>Noah 補了一句：「大概。」</p>
+<p>半小時後，他們站在一條完全不像目的地的巷子裡。巷口有一家炸雞店，一家洗衣店，一間小小的占卜店。天空開始飄雪，巷子盡頭有一隻貓從垃圾桶旁邊走過，看起來比他們更知道自己要去哪裡。</p>
+<p>林又晴看著 Noah。</p>
+<p>「你剛剛說你知道路。」</p>
+<p>Noah 說：「我知道的是方向，不是命運。」</p>
+<p>沈知行嘆了一口氣，正準備重新查地圖，一位穿灰色羽絨外套的女性從旁邊店裡走出來。她手上拎著幾個玻璃罐，看見他們三個站在雪裡研究手機，忍不住用英文問：</p>
+<p>「你們在找什麼？」</p>
+<p>沈知行說出店名。</p>
+<p>女性笑了。</p>
+<p>「你們走過頭了。那家店搬到前面去了。你們是觀光客？」</p>
+<p>「算是。」林又晴說，「我們在拍永續旅行。」</p>
+<p>女性挑了一下眉。</p>
+<p>「永續旅行第一課：不要完全相信地圖。城市改變得比資料快。」</p>
+<p>她叫 Minji，是首爾一個零廢棄生活倡議團體的成員。原本只是來買洗衣粉補充包，卻意外成為他們的臨時導覽。</p>
+<p>零廢棄商店比林又晴想像中小。木架上擺著玻璃罐、竹牙刷、固態洗髮餅、散裝穀物、清潔劑補充桶。店內沒有強烈的環保標語，只有一張手寫紙條：</p>
+<div class="signage-wrap"><div class="signage">需要多少，拿多少。</div></div>
+<p>Minji 拿出自己的空罐子，熟練地裝入洗衣粉。</p>
+<p>「很多人以為零廢棄是什麼都不能買。」她說，「其實不是。零廢棄不是反消費，而是反射性的消費。」</p>
+<p>「反射性的消費？」林又晴問。</p>
+<p>「就是你還沒想清楚，就已經買了。」Minji 說，「廣告說限量，你買；朋友說流行，你買；平台說免運，你買。最後你家裡堆滿東西，你卻說不知道為什麼那麼累。」</p>
+<p>Noah 正拿起一支竹牙刷研究。</p>
+<p>「可是這些東西通常比較貴。」</p>
+<p>Minji 點頭。</p>
+<p>「對，所以永續消費不是要每個人都立刻買更貴的產品。真正重要的是先少買錯的東西。買少一點，買久一點，修得了，用得完，這比買一堆環保商品更重要。」</p>
+<p>沈知行把這句話記下來。</p>
+<p>店裡來了一位年輕媽媽，帶著小孩裝麥片。小孩問為什麼不能買旁邊超市那種有卡通圖案的盒裝。媽媽蹲下來跟他說：「因為我們今天帶了自己的盒子，盒子也想工作。」</p>
+<p>林又晴偷偷拍下那一幕。</p>
+<p>「她說得好可愛。」她小聲說。</p>
+<p>Minji 看著那對母子。</p>
+<p>「永續如果只靠罪惡感，走不久。它要變成習慣，變成方便，最好還能有一點可愛。」</p>
+<p>離開商店時，雪停了。巷子濕漉漉的，霓虹燈反射在地面上。首爾仍然快速，仍然明亮，仍然有太多商品、太多咖啡杯、太多即時流行。但在這條小巷裡，有人拿著自己的罐子，慢慢買一點洗衣粉。</p>
+<p>林又晴說：「我以前以為永續生活很像苦行。」</p>
+<p>沈知行問：「現在呢？」</p>
+<p>她想了一下。</p>
+<p>「現在覺得比較像練習不要被推著走。」</p>
+<p>Noah 把剛買的竹牙刷放進背包。</p>
+<p>「我也開始了。」</p>
+<p>林又晴問：「你開始什麼？」</p>
+<p>「開始用比較貴的牙刷刷出比較有道德的牙齒。」</p>
+<p>Minji 聽不懂中文，但從林又晴翻譯後，笑得很大聲。</p>
+<p>沈知行在筆記本上寫下第二句：</p>
+<div class="notebook"><strong>消費不是每次都要買對，而是慢慢減少那些來不及思考的購買。</strong></div>
+</article>
+<article class="chapter" id="ch3"><div class="chapter-num">SECTION 03</div><h2><span class="city">巴黎</span>　一袋冷掉的可頌</h2>
+<p>巴黎不是一座城市，至少沈知行第一次抵達時是這樣覺得。</p>
+<p>它比較像一本被太多人翻過的書。塞納河像書頁中間的摺痕，橋梁是一枚枚書籤，建築立面帶著時間留下的淡黃色。咖啡館把椅子朝向街道，像是每個人都願意承認生活本身值得被觀看。</p>
+<p>可是巴黎也不是只有浪漫。</p>
+<p>巴黎有昂貴的房租，有觀光壓力，有移民社區，有罷工，有食物浪費，有時尚產業的光亮與陰影。它的優雅不是沒有裂縫，而是裂縫也被歷史整理成一種表情。</p>
+<p>他們抵達巴黎時，行李沒有一起抵達。</p>
+<p>航空公司櫃台人員用非常平靜的語氣告訴沈知行：「您的行李目前在伊斯坦堡。」</p>
+<p>Noah 聽完沉默三秒。</p>
+<p>「從地理上來說，它也在旅行。」</p>
+<p>林又晴笑到蹲下。</p>
+<p>沈知行沒有笑。他的西裝、訪談資料、備用相機電池、錄音麥克風全部在那只行李箱裡。第一場訪談排在隔天下午，對象是巴黎一家合作剩食平台的餐廳店長。</p>
+<p>他站在戴高樂機場的行李轉盤前，看著別人的箱子一只只被領走，突然有種奇怪的輕盈感。</p>
+<p>林又晴拍了拍他的肩。</p>
+<p>「恭喜你，沈知行。你正式進入極簡旅行。」</p>
+<p>「我不是自願的。」</p>
+<p>「很多永續轉型一開始也不是自願的。」她說，「政策、災害、成本、供應鏈壓力，大家都是被推著開始。」</p>
+<p>這句話讓沈知行愣了一下。</p>
+<p>Noah 在旁邊補充：「而且你現在看起來比較像紀錄片導演，不像顧問。少了一點 PowerPoint 味。」</p>
+<p>晚上，他們決定用剩食 App 買晚餐。</p>
+<p>Noah 看到「surprise bag」時眼睛一亮。</p>
+<p>「驚喜包。」他說，「巴黎，晚上八點，驚喜包。這聽起來像某種高級餐廳不願公開的秘密。」</p>
+<p>林又晴說：「也可能只是打烊前賣不完的麵包。」</p>
+<p>Noah 搖頭。</p>
+<p>「妳對法國的浪漫缺乏基本尊重。」</p>
+<p>他們走到一家位於小巷裡的麵包店。店面不大，櫥窗裡只剩幾個塔皮邊緣微焦的水果塔、一排沒有賣完的長棍、一籃可頌。燈光偏黃，空氣裡有奶油、麵粉與即將結束的一天。</p>
+<p>店長 Camille 是一位四十多歲的女人，短髮，動作俐落。她看了手機訂單，把一個紙袋遞給 Noah。</p>
+<p>Noah 接過來，袋子沉得出乎意料。</p>
+<p>他打開一看。</p>
+<p>八個可頌，三段長棍，一盒沙拉，兩個蘋果派。</p>
+<p>Noah 的表情有點複雜。</p>
+<p>「這不是我想像中的法式驚喜。」</p>
+<p>Camille 用英文問：「你想像的是什麼？」</p>
+<p>林又晴替他回答：「他以為會有主廚秘密料理。」</p>
+<p>Camille 大笑。</p>
+<p>「這就是主廚秘密料理。秘密是：如果你不來，它們今晚會進垃圾桶。」</p>
+<p>這句話讓笑聲慢慢停下來。</p>
+<p>沈知行看著那袋食物。</p>
+<p>可頌的表面已經不脆，長棍也不是剛出爐的狀態。它們不完美，不適合出現在廣告裡，也不適合擺在明天早上的櫥窗裡。但它們仍然是食物，仍然可以讓人吃飽。</p>
+<p>Camille 請他們坐在店內角落。她收拾櫃台，一邊說話。</p>
+<p>「以前我父親經營這家店時，賣不完的麵包大多丟掉。那時候大家覺得很正常，因為顧客要新鮮，櫥窗要漂亮，城市不喜歡看見昨天。」</p>
+<p>「城市不喜歡看見昨天。」沈知行重複。</p>
+<p>「對。」Camille 說，「可是浪費就是昨天。它不會因為你丟掉就消失。它只是換一個地方存在。」</p>
+<p>林又晴問：「加入剩食平台之後，真的有差嗎？」</p>
+<p>「有。」Camille 說，「不只是少丟食物，也改變我們備料的方式。我們開始更仔細看每天什麼時段賣得快，什麼天氣會剩什麼，哪些產品可以晚一點出爐。平台只是工具，真正改變的是我們開始承認：浪費不是生意成功的副產品，而是管理失敗的訊號。」</p>
+<p>Noah 咬了一口冷掉的可頌。</p>
+<p>「其實還是很好吃。」</p>
+<p>Camille 看著他。</p>
+<p>「當然。只是它不再年輕。」</p>
+<p>林又晴差點被沙拉嗆到。</p>
+<p>沈知行笑了。他突然覺得這個晚上比任何正式訪談都好。沒有投影片，沒有漂亮場地，沒有 ESG 標準縮寫。只有一袋差點被丟掉的麵包，一位願意改變做法的店長，三個因行李不見而穿得有點狼狽的旅人。</p>
+<p>Camille 從櫃台後拿出一本舊帳冊。裡面記錄著每天剩下的麵包數量、平台售出數量、捐給附近社福組織的數量。</p>
+<p>「我不是環保英雄。」她說，「我只是開店的人。每天多剩十條麵包，我就少賺一點，也多浪費一點。後來我發現，永續不是離我很遠的道德問題，它其實在我的帳本裡。」</p>
+<p>沈知行聽到「帳本」兩個字，心裡微微一動。</p>
+<p>他過去熟悉企業帳本、碳帳本、財務報表。可是這本小小的麵包店帳冊，比很多永續報告更誠實。</p>
+<p>因為它記錄的是每天的選擇。</p>
+<p>夜晚的巴黎很冷。他們離開麵包店時，Camille 把剩下兩段長棍塞給他們。</p>
+<p>「明天早上烤一下，還可以吃。」她說。</p>
+<p>Noah 接過袋子，鄭重點頭。</p>
+<p>「我會讓它們有尊嚴地進入我的胃。」</p>
+<p>Camille 聽完翻譯，又笑了。</p>
+<p>他們沿著小巷走回旅館。林又晴邊走邊拍，鏡頭裡有濕亮的石板路、半關的鐵門、遠方咖啡館還沒散去的人聲。</p>
+<p>沈知行忽然說：「第一個月的題目有了。」</p>
+<p>「什麼？」林又晴問。</p>
+<p>「從一個行李箱開始。」</p>
+<p>Noah 提起手上的紙袋。</p>
+<p>「我以為是從八個冷掉的可頌開始。」</p>
+<p>沈知行笑了笑。</p>
+<p>「也可以。反正我們第一個月要學的事情很簡單。」</p>
+<p>「什麼？」</p>
+<p>他看著那袋麵包，又看著巴黎街邊一整排還亮著燈的櫥窗。</p>
+<p>「人類丟掉東西的速度，太像我們忘記世界的速度。」</p>
+</article>
+<article class="chapter" id="ch4"><div class="chapter-num">SECTION 04</div><h2><span class="city">巴黎北站</span>　真正被浪費的人</h2>
+<p>第三天早上，他們去巴黎北站附近拍攝。</p>
+<p>北站是歐洲最繁忙的車站之一，連結法國、比利時、英國、荷蘭，也連結觀光客、移工、通勤族、小販、背包客與無家者。車站外的街道不像明信片上的巴黎。這裡更吵，更亂，也更真實。</p>
+<p>林又晴本來只是想拍人流，卻在廣場旁看見一群志工正在分送早餐。桌上有昨天從麵包店、超市與咖啡館收來的食物：長棍、三明治、水果、優格。</p>
+<p>Camille 也在那裡。</p>
+<p>「妳不是店長嗎？」Noah 問。</p>
+<p>「店長也可以早起。」Camille 說。</p>
+<p>她介紹他們認識一位志工 Malik。Malik 是阿爾及利亞裔法國人，年輕時做過餐廳廚師，後來投入食物銀行與社區廚房。</p>
+<p>Malik 看到攝影機，第一句話就說：</p>
+<p>「不要只拍食物。拍人。」</p>
+<p>林又晴放下相機。</p>
+<p>「為什麼？」</p>
+<p>「因為食物浪費聽起來像環境問題，」Malik 說，「但在城市裡，它也是人的問題。一邊有人吃不完，一邊有人吃不到。這不是食物不夠，而是城市分配失靈。」</p>
+<p>沈知行問：「你覺得剩食平台可以解決這個問題嗎？」</p>
+<p>Malik 搖頭。</p>
+<p>「不能只靠平台。平台可以提高效率，但不能取代政策、社福系統與社區信任。有些人沒有手機，沒有信用卡，沒有穩定住址。城市如果只把解方做成 App，就會把最需要的人排除在外。」</p>
+<p>這句話讓沈知行沉默。</p>
+<p>林又晴在旁邊輕聲說：「所以科技讓剩食被看見，但不一定讓所有飢餓被看見。」</p>
+<p>Malik 點頭。</p>
+<p>「對。永續不能只服務會掃 QR code 的人。」</p>
+<p>Noah 小聲說：「這句要記下來。」</p>
+<p>沈知行已經記了。</p>
+<p>一位穿深色外套的老人走到桌前，拿了一個三明治。他向 Malik 點頭，沒有多說話。Camille 把一個蘋果放進他的袋子裡。老人看了她一眼，露出很淡的笑。</p>
+<p>那一刻，沈知行突然明白，食物浪費不是一個冷冰冰的百分比。它有重量，有氣味，有保存期限，也有可能在某個寒冷早晨，變成一個人手裡的早餐。</p>
+<p>他以前在簡報裡看過很多圖表：全球食物浪費、碳排、甲烷、供應鏈損耗、消費端浪費比例。那些圖表沒有錯，但它們太安靜了。</p>
+<p>現場不安靜。</p>
+<p>現場有人排隊，有人咳嗽，有人不好意思多拿一份，有人把可頌藏進口袋想留到中午。現場讓人無法只用「效率」兩個字理解永續。</p>
+<p>拍攝結束後，林又晴坐在車站階梯上，沒有說話。</p>
+<p>沈知行問她怎麼了。</p>
+<p>她說：「我以前覺得浪費食物是不好的生活習慣。今天才覺得，它也有點像一種不公平。」</p>
+<p>Noah 把圍巾拉高。</p>
+<p>「所以我們第一個月不是在講減塑、剩食、消費而已。」</p>
+<p>「不然呢？」林又晴問。</p>
+<p>Noah 看向北站前來來去去的人群。</p>
+<p>「是在講一座城市怎麼對待那些被剩下的東西，還有被剩下的人。」</p>
+<p>沈知行沒有說話。</p>
+<p>他把筆記本打開，寫下第三句：</p>
+<div class="notebook"><strong>真正成熟的永續，不只問資源有沒有被浪費，也問人有沒有被遺漏。</strong></div>
+</article>
+<article class="chapter" id="ch5"><div class="chapter-num">SECTION 05</div><h2>第一個月筆記　結帳前的一秒</h2>
+<p>第一個月結束時，沈知行的行李終於回到他手上。</p>
+<p>航空公司把箱子送到巴黎旅館。箱面多了幾道刮痕，輪子卡著一小段陌生城市的泥土。沈知行打開箱子，看見整齊摺好的西裝、訪談資料、備用設備，一切都在。</p>
+<p>可是他忽然沒有那麼需要它們了。</p>
+<p>這幾天，他用同一件外套跑了三個城市，用手機完成臨時訪談，用剩食解決晚餐，用錯過的航班換來首爾的小巷，用失蹤的行李換來巴黎一袋冷掉的可頌。</p>
+<p>他開始明白，永續旅行不是把自己打造成零浪費的完美旅人，而是在每一次不完美的行程裡，看見系統如何運作。</p>
+<p>台北讓他看見便利的重量。</p>
+<p>首爾讓他看見少買之前，要先慢下來想。</p>
+<p>巴黎讓他看見食物浪費不是垃圾桶裡的問題，而是城市、店家、平台、政策與人的關係。</p>
+<p>第一個月，他們還沒有走進風電村，還沒有看見綠建築，也還沒有進入企業供應鏈與碳市場。可是沈知行知道，這趟旅程真正的入口已經出現了。</p>
+<p>入口不在國際會議中心，也不在永續報告的封面上。</p>
+<p>入口在便利商店的塑膠袋裡，在零廢棄商店的玻璃罐裡，在麵包店打烊前的一袋可頌裡，在巴黎北站一個老人接過早餐時低下去的眼神裡。</p>
+<p>林又晴整理影片素材時，問他：「你覺得第一個月的標題要不要更有力量？比如《被浪費的世界》？」</p>
+<p>沈知行搖頭。</p>
+<p>「太重了。」</p>
+<p>Noah 正在用旅館的小烤箱加熱剩下的長棍。</p>
+<p>「那叫《可頌救地球》？」</p>
+<p>林又晴白了他一眼。</p>
+<p>沈知行笑了笑，在筆記本上寫下本月最後一句：</p>
+<div class="notebook"><strong>永續不是要求每個人立刻成為完美的人，而是讓更多人在下一次選擇前，多停留一秒。</strong></div>
+<p>他停筆，看向窗外。</p>
+<p>巴黎的早晨正在亮起來。街角麵包店拉開鐵門，第一批新鮮麵包出爐。城市又開始它慣常的一天：生產、販售、購買、吃掉、丟棄、再生產。</p>
+<p>可是某些地方已經有一點不同。</p>
+<p>有人開始記錄剩下多少。</p>
+<p>有人開始帶自己的罐子。</p>
+<p>有人開始把賣不完的麵包交給下一個需要的人。</p>
+<p>有人開始在結帳前，多問自己一秒：</p>
+<p>我是真的需要它，還是只是被世界推著往前買？</p>
+<p>第一個月，沈知行終於確定，這趟旅行不是去尋找完美答案。</p>
+<p>而是去尋找那些已經開始改變的人。</p>
+<p>他把筆記本闔上。</p>
+<p>第二個月，他們要去荷蘭。</p>
+<p>Noah 看著行程表，忽然皺眉。</p>
+<p>「我們要騎很多自行車？」</p>
+<p>林又晴點頭。</p>
+<p>「非常多。」</p>
+<p>Noah 沉默了三秒。</p>
+<p>「我先聲明，我會騎腳踏車，但我不會用荷蘭人的速度思考人生。」</p>
+<p>沈知行看著窗外，笑了。</p>
+<p>旅程才剛開始。</p>
+</article>
+<section class="notes-section" id="notes"><div class="notes-inner"><div class="notes-title">本月真實永續案例筆記與資料來源</div>
+<article class="chapter" id="ch2"><div class="chapter-num">SECTION 02</div><h2><span class="city">首爾</span>　零廢棄地圖上的迷路</h2>
+<div class="note-card"><h3>Too Good To Go 剩食平台</h3><div class="note-row"><span class="note-label">國家／起源</span><span class="note-val">丹麥哥本哈根起源，後擴展至多國。</span></div></div><div class="note-card"><h3>法國反食物浪費政策</h3><div class="note-row"><span class="note-label">國家</span><span class="note-val">法國。</span></div></div><div class="note-card"><h3>歐盟循環經濟行動計畫</h3><div class="note-row"><span class="note-label">地區</span><span class="note-val">歐盟。</span></div></div><div class="note-card"><h3>首爾 Zero Waste Shops 與 Zero Seoul</h3></div>
+</div></section></main>
+
+<footer>
+  <a href="index.html">永續環遊世界365天　韓千山　著</a>
+</footer>
+
+</body>
+</html>
